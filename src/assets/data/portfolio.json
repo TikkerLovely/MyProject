@@ -1,0 +1,128 @@
+{
+  "personal": {
+    "name": "Chayangkul Somruk",
+    "logo": "CS",
+    "title": "Senior Data Center Engineer",
+    "description": "24/7 mission-critical data center operations specialist. Experienced in infrastructure stability, SLA compliance, monitoring, and incident response. Passionate about operational excellence and system reliability.",
+    "email": "chayangkul.somruk@gmail.com",
+    "phone": "+66962980316",
+    "location": "Bangkok, Thailand (Open to relocating internationally)",
+    "linkedin": "https://linkedin.com/in/Chayangkul-Somruk",
+    "github": "https://github.com/chayangkul",
+    "twitter": "https://twitter.com/chayangkul"
+  },
+  "about": {
+    "title": "About Me",
+    "paragraphs": [
+      "Senior Data Center Engineer with expertise in 24/7 mission-critical operations, infrastructure monitoring, and SLA compliance. Based in Bangkok, Thailand, with proven track record in optimizing data center performance, reducing MTTR, and managing complex network/infrastructure environments.",
+      "Specialized in proactive monitoring, incident response, and operational excellence. Experience includes NOC/DCC operations, real-time monitoring systems, infrastructure management, and cross-team coordination. Committed to continuous improvement and leveraging automation to enhance operational efficiency."
+    ],
+    "stats": [
+      {
+        "number": "2+",
+        "label": "Years in Current Role"
+      },
+      {
+        "number": "24/7",
+        "label": "Mission-Critical Ops"
+      },
+      {
+        "number": "20-30%",
+        "label": "Uptime Improvement"
+      }
+    ]
+  },
+  "skills": [
+    {
+      "icon": "💻",
+      "title": "Programming Languages",
+      "items": [
+        "Python, SQL, C++, C, Java",
+        "Scripting & Automation",
+        "System-level Programming",
+        "Network Protocols"
+      ]
+    },
+    {
+      "icon": "🔧",
+      "title": "Operations & Infrastructure",
+      "items": [
+        "Linux, Network Monitoring",
+        "Nagios, Zabbix, PRTG, Cacti",
+        "Hardware Automation",
+        "Incident Response, SOP Operations"
+      ]
+    },
+    {
+      "icon": "📊",
+      "title": "Data & Visualization",
+      "items": [
+        "Excel, Power BI",
+        "Data Analysis & Reporting",
+        "Analytics Dashboards",
+        "Performance Metrics"
+      ]
+    },
+    {
+      "icon": "🖥️",
+      "title": "Data Center Expertise",
+      "items": [
+        "Server & GPU Troubleshooting",
+        "OOB/BMC Tools",
+        "Hardware & Cabling",
+        "Access Control Systems"
+      ]
+    }
+  ],
+  "experience": [
+    {
+      "position": "Senior Data Center Engineer",
+      "company": "Tech Hub Solutions (Bangkok, TH)",
+      "date": "July 2025 - Present",
+      "achievements": [
+        "Led 24/7 mission-critical data center operations, ensuring high availability and SLA compliance",
+        "Improved infrastructure stability and SLA compliance through proactive monitoring and root cause analysis",
+        "Optimized monitoring workflows, reducing MTTR by 30-40% compared to manual processes",
+        "Automated operational reporting using Excel and Power BI, improving efficiency by 50-60%"
+      ]
+    },
+    {
+      "position": "DCC & NOC Engineer",
+      "company": "TCC Technology – One Bangkok Project",
+      "date": "July 2023 - July 2025",
+      "achievements": [
+        "Supported 24/7 network and infrastructure monitoring, ensuring service continuity through real-time monitoring and incident triage",
+        "Improved NOC operational efficiency through proactive monitoring of network, BMS, EMS, CCTV, and access systems",
+        "Performed rapid incident triage and first-level troubleshooting, reducing MTTE and supporting escalation",
+        "Analyzed system logs to identify recurring fault patterns and support root cause analysis"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "emoji": "📊",
+      "title": "Operational Incident & NOC Analytics Dashboard",
+      "tech": "Power BI • Excel • Python • Real-time Data",
+      "description": "Developed Power BI dashboards for NOC and Data Center Command Center operations. Enabled management reviews and operational decision-making with real-time incident analysis by date, category, and priority."
+    },
+    {
+      "emoji": "⚙️",
+      "title": "Infrastructure Monitoring Automation",
+      "tech": "Nagios • Zabbix • PRTG • Python • Excel",
+      "description": "Implemented comprehensive monitoring infrastructure for 24/7 operations. Automated incident detection, escalation workflows, and operational reporting using enterprise monitoring tools."
+    },
+    {
+      "emoji": "🔧",
+      "title": "Incident Response & SOP Operations",
+      "tech": "Network • Infrastructure • System Analysis • Automation",
+      "description": "Designed and implemented incident response procedures with cross-team coordination. Developed structured escalation processes, SOP-based operations, and proactive monitoring systems."
+    }
+  ],
+  "education": [
+    {
+      "school": "Bangkok University",
+      "degree": "Bachelor of Engineering (B.Eng.) Major: Computer Engineering",
+      "gpa": "Cumulative GPA: 3.00/4.00 (Second Class Honors)"
+    }
+  ]
+}
