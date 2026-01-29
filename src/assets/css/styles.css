@@ -115,16 +115,49 @@ body {
     background-clip: text;
     text-decoration: none;
     transition: transform 0.3s ease;
+    z-index: 101;
 }
 
 .logo:hover {
     transform: scale(1.05);
 }
 
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 101;
+    padding: 0;
+    gap: 5px;
+}
+
+.hamburger-menu span {
+    width: 25px;
+    height: 3px;
+    background: var(--text);
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.hamburger-menu.active span:nth-child(1) {
+    transform: rotate(45deg) translate(10px, 10px);
+}
+
+.hamburger-menu.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-menu.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
+}
+
 .nav-menu {
     display: flex;
     list-style: none;
     gap: var(--spacing-lg);
+    align-items: center;
 }
 
 .nav-link {
@@ -1002,10 +1035,23 @@ body.dark-mode .dark-mode-btn::before {
     border-radius: 4px;
     text-decoration: none;
     font-size: 0.9rem;
+    font-weight: 600;
+    display: inline-block;
 }
 
 .social-btn:hover {
     background: var(--secondary);
+    color: #0f1419;
+}
+
+body.dark-mode .social-btn {
+    background: #4da6ff;
+    color: #0f1419;
+}
+
+body.dark-mode .social-btn:hover {
+    background: #00ffff;
+    color: #0f1419;
 }
 
 .contact-form {
@@ -1100,11 +1146,23 @@ body.dark-mode .form-group textarea {
     background-color: white;
     color: #0066cc;
     font-weight: 600;
+    border: 2px solid white;
 }
 
 .cta-buttons .btn:hover {
     background-color: #f5f7fa;
     transform: translateY(-2px);
+}
+
+body.dark-mode .cta-buttons .btn {
+    background-color: #f5f7fa;
+    color: #0066cc;
+    border: 2px solid #f5f7fa;
+}
+
+body.dark-mode .cta-buttons .btn:hover {
+    background-color: white;
+    color: #0066cc;
 }
 
 /* ============================
@@ -1120,8 +1178,36 @@ body.dark-mode .form-group textarea {
         font-size: 2rem;
     }
 
+    .hamburger-menu {
+        display: flex;
+    }
+
     .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 70px;
         flex-direction: column;
+        background-color: rgba(255, 255, 255, 0.98);
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        gap: var(--spacing-md);
+        padding: var(--spacing-lg);
+        backdrop-filter: blur(10px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    body.dark-mode .nav-menu {
+        background-color: rgba(15, 20, 25, 0.98);
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .nav-link {
+        display: block;
+        padding: var(--spacing-sm);
     }
 
     .contact-wrapper {
