@@ -337,6 +337,12 @@ body {
     font-size: 5rem;
     box-shadow: var(--shadow-lg);
 }
+.avatar-img {
+    width: 90%;
+    height: 90%;
+    object-fit: cover; /* ⭐ บังคับให้รูปเต็มกล่อง */
+}
+
 
 /* ============================
    About Section
@@ -500,6 +506,38 @@ body {
 
 body.dark-mode .timeline-content {
     background: #1a2332;
+}
+
+/* Thumbnail support for big projects (e.g. One Bangkok) */
+.timeline-item.has-media {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+    padding-left: 60px; /* keep space for marker */
+}
+
+.timeline-item.has-media .timeline-marker {
+    left: 8px;
+}
+
+.company-media {
+    flex: 0 0 200px;
+    display: block;
+}
+
+.company-media img {
+    width: 200px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+    border: 1px solid rgba(255,255,255,0.06);
+}
+
+/* Hide media on small screens to prioritize text readability */
+@media (max-width: 700px) {
+    .timeline-item.has-media { display: block; padding-left: 100px; }
+    .company-media { display: none; }
 }
 
 /* ============================
@@ -773,6 +811,12 @@ body.dark-mode .education-content {
 
 .contact-item a:hover {
     color: var(--secondary);
+}
+
+/* Make location text use the same color as phone links */
+.contact-item p.location {
+    color: var(--primary);
+    font-weight: 500;
 }
 
 .contact-social {

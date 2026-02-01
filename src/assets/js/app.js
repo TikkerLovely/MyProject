@@ -5,6 +5,7 @@ async function loadPortfolioData() {
         const data = await response.json();
         
         // Update personal info
+        updateEducationSection(data.education);
         updatePersonalInfo(data.personal);
         updateHeroSection(data.personal);
         updateAboutSection(data.about);
@@ -100,7 +101,21 @@ function updateExperienceSection(experience) {
     
     experience.forEach(exp => {
         const timelineItem = document.createElement('div');
-        timelineItem.className = 'timeline-item';
+        // default class
+        let itemClass = 'timeline-item';
+
+        // If this is the One Bangkok project, include a small media thumbnail
+        let mediaHTML = '';
+        if (exp.company && (exp.company.includes('One Bangkok') || exp.company.includes('TCC Technology'))) {
+            itemClass += ' has-media';
+            mediaHTML = `
+                <div class="company-media">
+                    <img src="assets/images/one-bangkok.svg" alt="One Bangkok project" loading="lazy">
+                </div>
+            `;
+        }
+
+        timelineItem.className = itemClass;
         
         let achievementsHTML = '<ul class="achievements">';
         exp.achievements.forEach(achievement => {
@@ -109,6 +124,7 @@ function updateExperienceSection(experience) {
         achievementsHTML += '</ul>';
         
         timelineItem.innerHTML = `
+            ${mediaHTML}
             <div class="timeline-marker"></div>
             <div class="timeline-content">
                 <h3>${exp.position}</h3>
@@ -159,7 +175,8 @@ function updateContactSection(personal) {
     const phoneLink = document.querySelector('a[href^="tel:"]');
     if (phoneLink) phoneLink.href = `tel:${personal.phone}`;
     
-    const locationText = document.querySelector('.contact-item:last-child p:last-of-type');
+    // Use the explicit .location class for setting the location text
+    const locationText = document.querySelector('.contact-item p.location');
     if (locationText) locationText.textContent = personal.location;
     
     // Update social buttons
@@ -177,3 +194,34 @@ function updateFooter(personal) {
 
 // Load data when page loads
 document.addEventListener('DOMContentLoaded', loadPortfolioData);
+
+function updateEducationSection(educationList) {
+  const timeline = document.getElementById('education-timeline');
+  if (!timeline) return;
+
+  timeline.innerHTML = '';
+
+  educationList.forEach(edu => {
+    const item = document.createElement('div');
+    item.className = 'education-item';
+
+    const yearText =
+      edu.startYear && edu.endYear
+        ? `${edu.startYear} - ${edu.endYear}`
+        : '';
+
+    item.innerHTML = `
+      <div class="education-marker"></div>
+      <div class="education-content">
+        <h3>${edu.degree}</h3>
+        <p class="school">${edu.school}</p>
+        <p class="date">${yearText}</p>
+        <p class="gpa">${edu.gpa}</p>
+      </div>
+    `;
+
+    timeline.appendChild(item);
+  });
+}
+
+// Update education section

@@ -7,9 +7,8 @@
     "email": "chayangkul.somruk@gmail.com",
     "phone": "+66962980316",
     "location": "Bangkok, Thailand (Open to relocating internationally)",
-    "linkedin": "https://linkedin.com/in/Chayangkul-Somruk",
-    "github": "https://github.com/chayangkul",
-    "twitter": "https://twitter.com/chayangkul"
+    "linkedin": "https://www.linkedin.com/in/chayangkul-somruk-50b476312/",
+    "github": "https://github.com/TikkerLovely"
   },
   "about": {
     "title": "About Me",
@@ -119,7 +118,9 @@
     }
   ],
   "education": [
-    {
+    {      
+      "startYear": 2021,
+      "endYear": 2024,
       "school": "Bangkok University",
       "degree": "Bachelor of Engineering (B.Eng.) Major: Computer Engineering",
       "gpa": "Cumulative GPA: 3.00/4.00 (Second Class Honors)"

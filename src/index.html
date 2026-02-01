@@ -49,6 +49,7 @@
                 <div class="hero-buttons">
                     <a href="#contact" class="btn btn-primary">Get in Touch</a>
                     <a href="#projects" class="btn btn-secondary">View My Work</a>
+                    <a href="assets/documents/Chayangkul_Somruk_CV.pdf" download class="btn btn-tertiary">Download CV</a>
                 </div>
                 <div class="social-links">
                     <a href="https://linkedin.com/in/chayangkul-somruk-50b476312" target="_blank" class="social-icon">LinkedIn</a>
@@ -56,13 +57,16 @@
                 </div>
             </div>
             <div class="hero-image">
-                <div class="avatar-placeholder">
-                    <span>👨‍💻</span>
-                </div>
+            <div class="avatar-placeholder">
+                <img
+                src="assets/images/chayangkul.png"
+                alt="Chayangkul Somruk profile photo"
+                class="avatar-img">
             </div>
+
         </div>
     </section>
-
+    
     <!-- About Section -->
     <section id="about" class="about">
         <div class="container">
@@ -101,22 +105,12 @@
     <section id="education" class="education">
         <div class="container">
             <h2 class="section-title">Education</h2>
-            <div class="education-timeline">
-                <div class="education-item">
-                    <div class="education-marker"></div>
-                    <div class="education-content">
-                        <h3>Bachelor of Science in Information Technology</h3>
-                        <p class="school">Siam Technology Institute</p>
-                        <p class="date">2021 - 2024</p>
-                        <p class="description">
-                            Focused on network infrastructure, system administration, and data center operations. 
-                            Completed specialized projects in monitoring systems and infrastructure automation.
-                        </p>
-                    </div>
-                </div>
+            <div class="education-timeline" id="education-timeline">
+            <!-- JS จะมาใส่ตรงนี้ -->
             </div>
         </div>
-    </section>
+        </section>
+
 
     <!-- Skills Section -->
     <section id="skills" class="skills">
@@ -293,7 +287,7 @@
                         <span class="contact-icon">📍</span>
                         <div>
                             <p class="contact-label">Location</p>
-                            <p>Bangkok, Thailand</p>
+                            <p class="contact-value location">Bangkok, Thailand</p>
                         </div>
                     </div>
                     <div class="contact-item">
