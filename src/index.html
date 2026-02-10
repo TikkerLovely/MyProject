@@ -31,6 +31,7 @@
                 <li><a href="#skills" class="nav-link">Skills</a></li>
                 <li><a href="#experience" class="nav-link">Experience</a></li>
                 <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#etl-dashboard" class="nav-link">ETL Dashboard</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
                 <li><button id="dark-mode-toggle" class="dark-mode-btn" title="Toggle Dark Mode">🌙</button></li>
             </ul>
@@ -42,17 +43,17 @@
         <div class="hero-content">
             <div class="hero-text">
                 <h1 class="hero-title">Hi, I'm <span class="highlight">Chayangkul Somruk</span></h1>
-                <p class="hero-subtitle">Senior Data Center Engineer</p>
+                <p class="hero-subtitle">Senior Data Center Engineer • ETL & Dashboard Builder</p>
                 <p class="hero-description">
-                    24/7 mission-critical data center operations specialist. Experienced in infrastructure stability, SLA compliance, monitoring, and incident response. Passionate about operational excellence and system reliability.
+                    24/7 mission-critical data center operations specialist. Experienced in infrastructure stability, SLA compliance, monitoring, and incident response. Passionate about operational excellence, system reliability, and turning raw telemetry into decision-ready dashboards for stakeholders.
                 </p>
                 <div class="hero-buttons">
                     <a href="#contact" class="btn btn-primary">Get in Touch</a>
                     <a href="#projects" class="btn btn-secondary">View My Work</a>
                 </div>
                 <div class="social-links">
-                    <a href="https://linkedin.com/in/chayangkul-somruk-50b476312" target="_blank" class="social-icon">LinkedIn</a>
-                    <a href="https://github.com/TikkerLovely" target="_blank" class="social-icon">GitHub</a>
+                    <a href="https://linkedin.com/in/chayangkul-somruk-50b476312" target="_blank" class="social-icon" data-social-link="linkedin">LinkedIn</a>
+                    <a href="https://github.com/TikkerLovely" target="_blank" class="social-icon" data-social-link="github">GitHub</a>
                 </div>
             </div>
             <div class="hero-image">
@@ -262,6 +263,77 @@
                         </div>
                     </div>
                 </div>
+
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-placeholder">🧪</div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Live ETL Weather Operations Dashboard</h3>
+                        <p class="tech-stack">JavaScript • Open-Meteo API • Data Transformation • KPI Design</p>
+                        <p class="project-description">
+                            Built a browser-based ETL pipeline that extracts live weather data, transforms it into operational metrics, and loads a dashboard with KPIs, trend charts, and monitoring snapshots. Designed as a CV-ready showcase of data engineering fundamentals.
+                        </p>
+                        <div class="project-links">
+                            <a href="#etl-dashboard" class="project-link">View Dashboard</a>
+                            <a href="https://open-meteo.com/" target="_blank" class="project-link">API Source</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ETL Dashboard Section -->
+    <section id="etl-dashboard" class="etl-dashboard">
+        <div class="container">
+            <h2 class="section-title">Live ETL Operations Dashboard</h2>
+            <p class="section-subtitle">
+                Extracting live weather telemetry for Bangkok from a free API, transforming operational metrics, and loading the result into a real-time dashboard.
+            </p>
+
+            <div class="etl-flow">
+                <div class="etl-step">
+                    <h3>Extract</h3>
+                    <p>Open-Meteo public API for hourly weather telemetry</p>
+                </div>
+                <div class="etl-step">
+                    <h3>Transform</h3>
+                    <p>Aggregate 24-hour averages, risk flags, and reliability indicators</p>
+                </div>
+                <div class="etl-step">
+                    <h3>Load</h3>
+                    <p>Render KPI cards, chart, and operations table for portfolio viewers</p>
+                </div>
+            </div>
+
+            <div id="etl-status" class="etl-status">Loading live ETL data...</div>
+
+            <div class="etl-kpi-grid" id="etl-kpis"></div>
+
+            <div class="etl-visuals">
+                <div class="etl-panel">
+                    <h3>24-Hour Temperature Trend (°C)</h3>
+                    <div id="etl-chart" class="etl-chart" aria-label="Temperature chart"></div>
+                </div>
+
+                <div class="etl-panel">
+                    <h3>Recent Telemetry Snapshot</h3>
+                    <div class="etl-table-wrapper">
+                        <table class="etl-table">
+                            <thead>
+                                <tr>
+                                    <th>Time</th>
+                                    <th>Temp (°C)</th>
+                                    <th>Humidity (%)</th>
+                                    <th>Rain Risk (%)</th>
+                                </tr>
+                            </thead>
+                            <tbody id="etl-table-body"></tbody>
+                        </table>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -301,8 +373,8 @@
                         <div>
                             <p class="contact-label">Social Links</p>
                             <div class="social-buttons">
-                                <a href="https://linkedin.com/in/chayangkul-somruk-50b476312" target="_blank" class="social-btn">LinkedIn</a>
-                                <a href="https://github.com/TikkerLovely" target="_blank" class="social-btn">GitHub</a>
+                                <a href="https://linkedin.com/in/chayangkul-somruk-50b476312" target="_blank" class="social-btn" data-social-link="linkedin">LinkedIn</a>
+                                <a href="https://github.com/TikkerLovely" target="_blank" class="social-btn" data-social-link="github">GitHub</a>
                             </div>
                         </div>
                     </div>
@@ -347,7 +419,7 @@
             <div class="footer-content">
                 <p>&copy; 2024-2025 Chayangkul Somruk. All rights reserved.</p>
                 <p class="footer-stats">
-                    Built with 💻 HTML/CSS/JS • Hosted on Netlify
+                    Built with 💻 HTML/CSS/JS • Hosted on Netlify • Views: <span id="visitor-count">...</span>
                 </p>
             </div>
         </div>
@@ -356,6 +428,7 @@
         <script src="assets/js/dark-mode.js"></script>
         <script src="assets/js/contact.js"></script>
         <script src="assets/js/hamburger.js"></script>
+        <script src="assets/js/etl-dashboard.js"></script>
     </footer>
 </body>
 </html>

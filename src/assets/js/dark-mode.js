@@ -1,28 +1,26 @@
-// Dark Mode Toggle
-const darkModeToggle = document.getElementById('dark-mode-toggle');
-const htmlElement = document.documentElement;
+(() => {
+    const darkModeToggle = document.getElementById('dark-mode-toggle');
+    if (!darkModeToggle) return;
 
-// Load dark mode preference from localStorage
-const darkModeEnabled = localStorage.getItem('darkMode') === 'true';
-if (darkModeEnabled) {
-    document.body.classList.add('dark-mode');
-    darkModeToggle.textContent = '☀️';
-}
+    const DARK_MODE_KEY = 'darkMode';
 
-// Toggle dark mode on button click
-darkModeToggle.addEventListener('click', () => {
-    document.body.classList.toggle('dark-mode');
-    const isDarkMode = document.body.classList.contains('dark-mode');
-    localStorage.setItem('darkMode', isDarkMode);
-    darkModeToggle.textContent = isDarkMode ? '☀️' : '🌙';
-});
+    const setDarkMode = (enabled) => {
+        document.body.classList.toggle('dark-mode', enabled);
+        darkModeToggle.textContent = enabled ? '☀️' : '🌙';
+    };
 
-// Respect system dark mode preference if no saved preference
-if (!localStorage.getItem('darkMode')) {
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    if (prefersDark) {
-        document.body.classList.add('dark-mode');
-        darkModeToggle.textContent = '☀️';
-        localStorage.setItem('darkMode', 'true');
+    const savedPreference = localStorage.getItem(DARK_MODE_KEY);
+    if (savedPreference === null) {
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        setDarkMode(prefersDark);
+        localStorage.setItem(DARK_MODE_KEY, String(prefersDark));
+    } else {
+        setDarkMode(savedPreference === 'true');
     }
-}
+
+    darkModeToggle.addEventListener('click', () => {
+        const isDarkMode = !document.body.classList.contains('dark-mode');
+        setDarkMode(isDarkMode);
+        localStorage.setItem(DARK_MODE_KEY, String(isDarkMode));
+    });
+})();

@@ -2,13 +2,13 @@
   "personal": {
     "name": "Chayangkul Somruk",
     "logo": "CS",
-    "title": "Senior Data Center Engineer",
-    "description": "24/7 mission-critical data center operations specialist. Experienced in infrastructure stability, SLA compliance, monitoring, and incident response. Passionate about operational excellence and system reliability.",
+    "title": "Senior Data Center Engineer • ETL & Dashboard Builder",
+    "description": "24/7 mission-critical data center operations specialist. Experienced in infrastructure stability, SLA compliance, monitoring, and incident response. Passionate about transforming operational telemetry into clear, decision-ready ETL dashboards.",
     "email": "chayangkul.somruk@gmail.com",
     "phone": "+66962980316",
     "location": "Bangkok, Thailand (Open to relocating internationally)",
     "linkedin": "https://linkedin.com/in/Chayangkul-Somruk",
-    "github": "https://github.com/chayangkul",
+    "github": "https://github.com/TikkerLovely",
     "twitter": "https://twitter.com/chayangkul"
   },
   "about": {
@@ -100,22 +100,61 @@
   ],
   "projects": [
     {
+      "emoji": "🧪",
+      "title": "Live ETL Weather Operations Dashboard",
+      "tech": "JavaScript • Open-Meteo API • ETL • Data Visualization",
+      "description": "Built a browser-based ETL pipeline that extracts live weather telemetry, transforms it into operational KPIs, and loads dashboard cards, trend chart, and a snapshot table for stakeholders.",
+      "links": [
+        {
+          "label": "View Dashboard",
+          "url": "#etl-dashboard",
+          "external": false
+        },
+        {
+          "label": "API Source",
+          "url": "https://open-meteo.com/",
+          "external": true
+        }
+      ]
+    },
+    {
       "emoji": "📊",
       "title": "Operational Incident & NOC Analytics Dashboard",
       "tech": "Power BI • Excel • Python • Real-time Data",
-      "description": "Developed Power BI dashboards for NOC and Data Center Command Center operations. Enabled management reviews and operational decision-making with real-time incident analysis by date, category, and priority."
+      "description": "Developed Power BI dashboards for NOC and Data Center Command Center operations. Enabled management reviews and operational decision-making with real-time incident analysis by date, category, and priority.",
+      "links": [
+        {
+          "label": "GitHub",
+          "url": "https://github.com/TikkerLovely",
+          "external": true
+        }
+      ]
     },
     {
       "emoji": "⚙️",
       "title": "Infrastructure Monitoring Automation",
       "tech": "Nagios • Zabbix • PRTG • Python • Excel",
-      "description": "Implemented comprehensive monitoring infrastructure for 24/7 operations. Automated incident detection, escalation workflows, and operational reporting using enterprise monitoring tools."
+      "description": "Implemented comprehensive monitoring infrastructure for 24/7 operations. Automated incident detection, escalation workflows, and operational reporting using enterprise monitoring tools.",
+      "links": [
+        {
+          "label": "GitHub",
+          "url": "https://github.com/TikkerLovely",
+          "external": true
+        }
+      ]
     },
     {
       "emoji": "🔧",
       "title": "Incident Response & SOP Operations",
       "tech": "Network • Infrastructure • System Analysis • Automation",
-      "description": "Designed and implemented incident response procedures with cross-team coordination. Developed structured escalation processes, SOP-based operations, and proactive monitoring systems."
+      "description": "Designed and implemented incident response procedures with cross-team coordination. Developed structured escalation processes, SOP-based operations, and proactive monitoring systems.",
+      "links": [
+        {
+          "label": "GitHub",
+          "url": "https://github.com/TikkerLovely",
+          "external": true
+        }
+      ]
     }
   ],
   "education": [
