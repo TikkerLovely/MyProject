@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body class="bg-clear-night">
+    <div id="globalWeatherBg" class="global-weather-bg"></div>
+    <div class="global-overlay"></div>
     <nav class="navbar">
         <div class="nav-container">
             <a href="#home" class="logo">CS</a>
@@ -25,12 +27,13 @@
                 <li><a href="#experience" class="nav-link">Experience</a></li>
                 <li><a href="#projects" class="nav-link">Projects</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
-                <li><button id="dark-mode-toggle" class="dark-mode-btn" title="Toggle Dark Mode">🌙</button></li>
             </ul>
         </div>
     </nav>
 
     <section id="home" class="hero hero-professional">
+        <div id="heroWeatherBg" class="hero-weather-bg"></div>
+        <div class="hero-overlay"></div>
         <div class="hero-content hero-content-centered">
             <div class="hero-text">
                 <h1 class="hero-title">Chayangkul Somruk</h1>
@@ -173,7 +176,6 @@
         </div>
         <script src="assets/js/app.js"></script>
         <script src="assets/js/counter.js"></script>
-        <script src="assets/js/dark-mode.js"></script>
         <script src="assets/js/contact.js"></script>
         <script src="assets/js/hamburger.js"></script>
         <script src="assets/js/weather.js"></script>

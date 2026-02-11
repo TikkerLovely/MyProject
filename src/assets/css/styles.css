@@ -2191,3 +2191,79 @@ body.reveal-enabled .reveal-section.is-visible {
     font-size: 0.9rem;
     opacity: 0.85;
 }
+
+/* ============================
+   Weather Scene Engine
+   ============================ */
+
+.global-weather-bg {
+    position: fixed;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: blur(42px);
+    transform: scale(1.12);
+    z-index: -3;
+    opacity: 1;
+    transition: opacity 500ms ease;
+}
+
+.global-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(8, 16, 28, 0.62);
+    z-index: -2;
+}
+
+.hero {
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-weather-bg {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 0;
+    opacity: 1;
+    transition: opacity 450ms ease;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 15% 20%, rgba(255,255,255,0.06), transparent 55%), rgba(0,0,0,0.52);
+    z-index: 1;
+}
+
+.hero .container,
+.hero .content,
+.hero-content,
+.weather-card {
+    position: relative;
+    z-index: 2;
+}
+
+.forecast-day {
+    cursor: pointer;
+    transition: transform 200ms ease, background 200ms ease, border-color 200ms ease;
+}
+
+.forecast-day:hover {
+    transform: translateY(-2px);
+}
+
+.forecast-day.is-active {
+    border-color: rgba(120,180,255,0.45);
+    background: rgba(255,255,255,0.06);
+}
+
+@media (max-width: 768px) {
+    .global-weather-bg {
+        filter: blur(26px);
+        transform: scale(1.06);
+    }
+}
