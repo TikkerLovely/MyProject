@@ -1693,3 +1693,193 @@ body.dark-mode .etl-panel {
         text-align: center;
     }
 }
+
+/* ============================
+   Infrastructure Portfolio Refresh
+   ============================ */
+
+body {
+    background: linear-gradient(160deg, #0b1220, #131d32);
+    color: #e5e7eb;
+}
+
+.section-title {
+    background: none;
+    color: #e2e8f0;
+    -webkit-text-fill-color: currentColor;
+}
+
+.hero-professional {
+    background: transparent;
+    min-height: auto;
+    padding-top: 7rem;
+}
+
+.hero-title {
+    color: #f8fafc;
+    font-size: clamp(2rem, 5vw, 3.2rem);
+}
+
+.hero-subtitle {
+    color: #c7d2fe;
+    font-size: 1.4rem;
+}
+
+.hero-description {
+    color: #cbd5e1;
+    max-width: 60ch;
+}
+
+.profile-card,
+.skill-card,
+.timeline-content,
+.project-card,
+.contact-form,
+.stat,
+.weather-glass,
+.capability-item {
+    background: rgba(15, 23, 42, 0.55);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(148, 163, 184, 0.25);
+    box-shadow: none;
+    color: #e2e8f0;
+}
+
+.profile-role,
+.skill-card h3,
+.timeline-content h3,
+.project-content h3,
+.contact-info h3,
+.form-group label,
+.etl-panel h3 {
+    color: #f8fafc;
+}
+
+.weather-wrap {
+    margin-top: 1rem;
+}
+
+.weather-glass {
+    border-radius: 14px;
+    padding: 1rem 1.25rem;
+}
+
+.weather-date,
+.weather-city,
+.weather-state,
+.weather-current p,
+.forecast-day p {
+    color: #cbd5e1;
+}
+
+.weather-current {
+    display: flex;
+    align-items: baseline;
+    gap: 1rem;
+}
+
+.weather-current h3 {
+    font-size: 2rem;
+    color: #f8fafc;
+}
+
+.weather-forecast {
+    margin-top: .8rem;
+    display: grid;
+    grid-template-columns: repeat(7, minmax(90px, 1fr));
+    gap: .5rem;
+}
+
+.forecast-day {
+    background: rgba(30, 41, 59, 0.6);
+    border: 1px solid rgba(148, 163, 184, 0.2);
+    border-radius: 10px;
+    padding: .55rem;
+    font-size: .82rem;
+}
+
+.capabilities {
+    padding: 2rem 0 3rem;
+}
+
+.capabilities-grid {
+    display: grid;
+    gap: .8rem;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.capability-item {
+    padding: .8rem 1rem;
+    border-radius: 10px;
+    font-size: .95rem;
+}
+
+.about,
+.skills,
+.experience,
+.projects,
+.contact {
+    background: transparent;
+}
+
+.tech-stack,
+.project-description,
+.achievements li,
+.contact-label,
+.contact-item a,
+.skill-card li,
+.footer-stats,
+.footer-content p {
+    color: #cbd5e1;
+}
+
+.project-image {
+    background: rgba(15, 23, 42, 0.35);
+    height: 120px;
+}
+
+.project-placeholder,
+.skill-icon,
+.contact-icon,
+.avatar-placeholder,
+.etl-dashboard {
+    display: none;
+}
+
+.btn-primary {
+    background: #334155;
+}
+
+.btn-secondary {
+    border-color: #64748b;
+    color: #e2e8f0;
+}
+
+.btn-secondary:hover,
+.btn-primary:hover,
+.project-link:hover {
+    background: #475569;
+    color: #fff;
+}
+
+.project-link {
+    background: #334155;
+}
+
+.footer {
+    border-top: 1px solid rgba(148, 163, 184, 0.2);
+    background: transparent;
+}
+
+.bg-clear-day { background: linear-gradient(155deg, #1e3a8a, #0f172a); }
+.bg-clear-night { background: linear-gradient(155deg, #0b1120, #111827); }
+.bg-cloudy { background: linear-gradient(155deg, #334155, #1e293b); }
+.bg-rain { background: linear-gradient(155deg, #1e3a5f, #0f172a); }
+.bg-storm { background: linear-gradient(155deg, #111827, #020617); }
+.bg-mist { background: linear-gradient(155deg, #374151, #1f2937); }
+
+@media (max-width: 900px) {
+    .weather-forecast {
+        grid-template-columns: repeat(2, minmax(120px, 1fr));
+    }
+}

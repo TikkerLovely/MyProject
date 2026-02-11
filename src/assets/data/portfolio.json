@@ -2,75 +2,64 @@
   "personal": {
     "name": "Chayangkul Somruk",
     "logo": "CS",
-    "title": "Cloud & Infrastructure Engineer",
-    "description": "Specialized in 24/7 critical systems, infrastructure automation, and ETL data pipelines for mission-critical environments.",
+    "title": "Infrastructure & Systems Engineer",
+    "description": "Working in 24/7 infrastructure environments, handling system monitoring, incident coordination, and infrastructure tasks. Background in data center operations with growing focus on networking and automation.",
     "email": "chayangkul.somruk@gmail.com",
     "phone": "+66962980316",
-    "location": "Bangkok, Thailand (Open to relocating internationally)",
-    "linkedin": "https://linkedin.com/in/Chayangkul-Somruk",
-    "github": "https://github.com/TikkerLovely",
-    "twitter": "https://twitter.com/chayangkul"
+    "location": "Bangkok, Thailand",
+    "linkedin": "https://linkedin.com/in/chayangkul-somruk-50b476312",
+    "github": "https://github.com/TikkerLovely"
   },
   "about": {
     "title": "About Me",
     "paragraphs": [
-      "Cloud & Infrastructure Engineer with 2+ years in mission-critical Data Center and NOC operations. Experienced in maintaining high-availability platforms, monitoring complex infrastructure, and executing fast incident response under SLA constraints.",
-      "Focused on automation-first operations: transforming telemetry into actionable dashboards, improving MTTR, and driving operational reliability across production environments."
+      "Infrastructure and systems professional with practical experience in data center operations, system monitoring, and incident coordination in shift-based environments.",
+      "Currently developing stronger networking and automation skills while continuing to support reliable day-to-day infrastructure operations."
     ],
     "stats": [
       {
         "number": "2+",
-        "label": "Years Experience"
+        "label": "Years in Infrastructure Operations"
       },
       {
-        "number": "99.99%",
-        "label": "SLA Target Operations"
+        "number": "24/7",
+        "label": "Shift-Based Environment"
       },
       {
-        "number": "30%",
-        "label": "MTTR Reduction"
+        "number": "Ongoing",
+        "label": "Networking & Automation Growth"
       }
     ]
   },
   "skills": [
     {
-      "icon": "🛡️",
-      "title": "Core Expertise",
+      "icon": "\u2022",
+      "title": "Infrastructure Operations",
       "items": [
-        "Data Center Operations",
-        "Incident Management & Escalation",
-        "SLA Handling & Service Continuity",
-        "Infrastructure Monitoring (NOC/DCC)"
+        "Data Center Routine Operations",
+        "System Health Monitoring",
+        "Incident Logging and Coordination",
+        "Operational Checklist Execution"
       ]
     },
     {
-      "icon": "☁️",
-      "title": "Cloud & Platform",
+      "icon": "\u2022",
+      "title": "Networking & Systems",
       "items": [
-        "AWS (EC2, S3, IAM)",
-        "Linux Administration",
-        "Container Fundamentals (Docker)",
-        "Git-based Delivery Workflow"
+        "Basic Network Troubleshooting",
+        "Linux Environment Handling",
+        "Server Hardware Handling",
+        "Access and Connectivity Checks"
       ]
     },
     {
-      "icon": "🧠",
-      "title": "Automation & Data",
+      "icon": "\u2022",
+      "title": "Reporting & Communication",
       "items": [
-        "Python & SQL Automation",
-        "ETL Pipeline Fundamentals",
-        "Power BI / Dashboard Analytics",
-        "Operational Reporting & KPI Tracking"
-      ]
-    },
-    {
-      "icon": "🔧",
-      "title": "Tooling",
-      "items": [
-        "Nagios, Zabbix, PRTG, Cacti",
-        "System & Log Troubleshooting",
-        "SOP-based Operations",
-        "Cross-team Incident Coordination"
+        "Daily and Shift Reporting",
+        "Issue Tracking Documentation",
+        "Cross-Team Communication",
+        "Operational Status Updates"
       ]
     }
   ],
@@ -80,100 +69,63 @@
       "company": "Tech Hub Solutions (Bangkok, TH)",
       "date": "July 2025 - Present",
       "achievements": [
-        "Handled 24/7 mission-critical infrastructure operations across production environments.",
-        "Maintained service performance aligned with 99.99% availability and strict SLA requirements.",
-        "Reduced incident resolution time (MTTR) by 30-40% through proactive monitoring and triage flow improvements.",
-        "Automated operational reporting workflows, cutting manual reporting effort by 50-60%."
+        "Performed routine infrastructure monitoring and support during assigned shifts.",
+        "Handled incident coordination with internal teams and followed escalation procedures.",
+        "Maintained operational records and updated status reports for ongoing activities.",
+        "Executed infrastructure-related tasks following standard operating guidelines."
       ]
     },
     {
       "position": "DCC & NOC Engineer",
-      "company": "TCC Technology – One Bangkok Project",
+      "company": "TCC Technology \u2013 One Bangkok Project",
       "date": "July 2023 - July 2025",
       "achievements": [
-        "Monitored multi-system infrastructure (Network, BMS, EMS, CCTV, Access Control) in 24/7 operations.",
-        "Executed first-response incident triage with escalation discipline to minimize service impact.",
-        "Analyzed recurring faults and collaborated in root-cause elimination initiatives.",
-        "Improved operational visibility using structured dashboards and recurring KPI reports."
+        "Monitored network and facility-related systems as part of daily operations.",
+        "Coordinated first-response actions and communicated updates to relevant teams.",
+        "Conducted initial checks to support issue diagnosis before escalation.",
+        "Maintained shift handover notes and contributed to incident documentation."
       ]
     }
   ],
   "projects": [
     {
-      "emoji": "🧪",
-      "title": "Live ETL Weather Operations Dashboard",
-      "tech": "JavaScript • Open-Meteo API • ETL • Data Visualization",
-      "description": "Built a browser-based ETL pipeline that extracts live weather telemetry, transforms it into operational KPIs, and loads dashboard cards, trend chart, and a snapshot table for stakeholders.",
-      "links": [
-        {
-          "label": "View Dashboard",
-          "url": "#etl-dashboard",
-          "external": false
-        },
-        {
-          "label": "API Source",
-          "url": "https://open-meteo.com/",
-          "external": true
-        }
-      ],
-      "problem": "Operational telemetry was scattered and difficult for stakeholders to interpret quickly.",
-      "solution": "Built a browser ETL flow to extract Open-Meteo data, transform 24-hour KPIs, and load visual components in real time.",
-      "result": "Enabled a clear decision-ready dashboard demo with live API integration for portfolio and interview discussions."
-    },
-    {
-      "emoji": "📊",
-      "title": "Operational Incident & NOC Analytics Dashboard",
-      "tech": "Power BI • Excel • Python • Real-time Data",
-      "description": "Developed Power BI dashboards for NOC and Data Center Command Center operations. Enabled management reviews and operational decision-making with real-time incident analysis by date, category, and priority.",
+      "emoji": "\u2022",
+      "title": "Operations Reporting Dashboard",
+      "tech": "Excel \u2022 Power BI",
+      "description": "Built a simple reporting view for shift and incident updates to improve day-to-day visibility for team communication.",
       "links": [
         {
           "label": "GitHub",
           "url": "https://github.com/TikkerLovely",
           "external": true
         }
-      ],
-      "problem": "Managers lacked a unified incident view across time, severity, and category.",
-      "solution": "Designed Power BI views and summary slices for daily monitoring and weekly operational reviews.",
-      "result": "Improved reporting clarity and reduced preparation time for management reviews."
+      ]
     },
     {
-      "emoji": "⚙️",
-      "title": "Infrastructure Monitoring Automation",
-      "tech": "Nagios • Zabbix • PRTG • Python • Excel",
-      "description": "Implemented comprehensive monitoring infrastructure for 24/7 operations. Automated incident detection, escalation workflows, and operational reporting using enterprise monitoring tools.",
+      "emoji": "\u2022",
+      "title": "Monitoring Workflow Notes",
+      "tech": "Documentation \u2022 SOP",
+      "description": "Organized monitoring and handover steps into clear operational notes for consistent shift execution.",
       "links": [
         {
           "label": "GitHub",
           "url": "https://github.com/TikkerLovely",
           "external": true
         }
-      ],
-      "problem": "Monitoring and escalation steps were manual and inconsistent across shifts.",
-      "solution": "Integrated tool-based alerting and standardized escalation/reporting workflows.",
-      "result": "Lowered manual effort while improving response consistency and service continuity."
+      ]
     },
     {
-      "emoji": "🔧",
-      "title": "Incident Response & SOP Operations",
-      "tech": "Network • Infrastructure • System Analysis • Automation",
-      "description": "Designed and implemented incident response procedures with cross-team coordination. Developed structured escalation processes, SOP-based operations, and proactive monitoring systems.",
+      "emoji": "\u2022",
+      "title": "Infrastructure Status Page Prototype",
+      "tech": "HTML \u2022 CSS \u2022 JavaScript",
+      "description": "Created a lightweight internal-style status view prototype for presenting current service conditions in a readable format.",
       "links": [
         {
           "label": "GitHub",
           "url": "https://github.com/TikkerLovely",
           "external": true
         }
-      ],
-      "problem": "Incident actions were inconsistent across teams during high-pressure events.",
-      "solution": "Defined SOP-driven incident paths and handoff checkpoints for each escalation stage.",
-      "result": "Faster coordination and fewer repeated incidents through structured response practices."
-    }
-  ],
-  "education": [
-    {
-      "school": "Bangkok University",
-      "degree": "Bachelor of Engineering (B.Eng.) Major: Computer Engineering",
-      "gpa": "Cumulative GPA: 3.00/4.00 (Second Class Honors)"
+      ]
     }
   ]
 }

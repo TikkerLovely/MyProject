@@ -3,24 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chayangkul Somruk - Senior Data Center Engineer Portfolio</title>
-    <meta name="description" content="Senior Data Center Engineer with 2+ years of experience in 24/7 mission-critical operations, infrastructure monitoring, and SLA compliance. Bangkok, Thailand.">
-    <meta name="keywords" content="Data Center Engineer, Infrastructure, Monitoring, NOC, DCC, Bangkok">
+    <title>Chayangkul Somruk - Infrastructure & Systems Engineer</title>
+    <meta name="description" content="Infrastructure & Systems Engineer working in 24/7 infrastructure environments, with experience in monitoring, incident coordination, and operational support.">
+    <meta name="keywords" content="Infrastructure Engineer, Systems Engineer, Data Center, Monitoring, Incident Coordination">
     <meta name="author" content="Chayangkul Somruk">
-    <meta name="theme-color" content="#0066cc">
-    <meta property="og:title" content="Chayangkul Somruk - Senior Data Center Engineer">
-    <meta property="og:description" content="Explore my portfolio showcasing data center operations, infrastructure automation, and incident response expertise.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://resume-chayangkul.netlify.app">
-    <link rel="canonical" href="https://resume-chayangkul.netlify.app">
+    <meta name="theme-color" content="#0f172a">
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
-<body>
-    <!-- Navigation -->
+<body class="bg-clear-night">
     <nav class="navbar">
         <div class="nav-container">
             <a href="#home" class="logo">CS</a>
-            <button id="hamburger-menu" class="hamburger-menu" title="Menu">
+            <button id="hamburger-menu" class="hamburger-menu" title="Menu" aria-label="Open menu">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -28,28 +22,25 @@
             <ul class="nav-menu">
                 <li><a href="#home" class="nav-link">Home</a></li>
                 <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#skills" class="nav-link">Skills</a></li>
                 <li><a href="#experience" class="nav-link">Experience</a></li>
                 <li><a href="#projects" class="nav-link">Projects</a></li>
-                <li><a href="#etl-dashboard" class="nav-link">ETL Dashboard</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
                 <li><button id="dark-mode-toggle" class="dark-mode-btn" title="Toggle Dark Mode">🌙</button></li>
             </ul>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
+    <section id="home" class="hero hero-professional">
         <div class="hero-content">
             <div class="hero-text">
-                <h1 class="hero-title">Hi, I'm <span class="highlight">Chayangkul Somruk</span></h1>
-                <p class="hero-subtitle">Cloud & Infrastructure Engineer</p>
+                <h1 class="hero-title">Chayangkul Somruk</h1>
+                <p class="hero-subtitle">Infrastructure & Systems Engineer</p>
                 <p class="hero-description">
-                    Specialized in 24/7 critical production systems, infrastructure automation, and data pipelines. 2+ years supporting mission-critical environments with measurable SLA and MTTR improvements.
+                    Working in 24/7 infrastructure environments, handling system monitoring, incident coordination, and infrastructure tasks. Background in data center operations with growing focus on networking and automation.
                 </p>
                 <div class="hero-buttons">
-                    <a href="#contact" class="btn btn-primary">Get in Touch</a>
-                    <a href="#projects" class="btn btn-secondary">View My Work</a>
+                    <a href="assets/documents/Chayangkul_Somruk_CV.pdf" download target="_blank" rel="noopener" class="btn btn-primary">Download Resume</a>
+                    <a href="#contact" class="btn btn-secondary">Contact</a>
                 </div>
                 <div class="social-links">
                     <a href="https://linkedin.com/in/chayangkul-somruk-50b476312" target="_blank" class="social-icon" data-social-link="linkedin">LinkedIn</a>
@@ -58,330 +49,103 @@
             </div>
             <div class="hero-image">
                 <div class="profile-card" aria-label="Professional profile panel">
-                    <div class="profile-avatar">CS</div>
-                    <p class="profile-role">Production Infrastructure</p>
+                    <p class="profile-role">Operational Focus</p>
                     <div class="profile-meta">
-                        <span>24/7 Ops</span>
-                        <span>99.99% Target SLA</span>
-                        <span>MTTR -30%</span>
+                        <span>24/7 Shift Operations</span>
+                        <span>System Monitoring</span>
+                        <span>Incident Coordination</span>
                     </div>
                 </div>
             </div>
         </div>
+
+        <div class="container weather-wrap">
+            <section id="weather" class="weather-glass" aria-live="polite">
+                <p class="weather-date" id="weather-date">Loading date...</p>
+                <p class="weather-city" id="weather-city">Detecting location...</p>
+                <div class="weather-current">
+                    <h3 id="weather-temp">--°C</h3>
+                    <p id="weather-condition">Loading weather...</p>
+                </div>
+                <p id="weather-state" class="weather-state">Loading weather data...</p>
+                <div class="weather-forecast" id="weather-forecast"></div>
+            </section>
+        </div>
     </section>
 
-    <!-- About Section -->
+    <section id="capabilities" class="capabilities">
+        <div class="container">
+            <h2 class="section-title">Core Capabilities</h2>
+            <div class="capabilities-grid">
+                <div class="capability-item">Infrastructure Operations</div>
+                <div class="capability-item">System Monitoring & Incident Handling</div>
+                <div class="capability-item">Server Hardware Management</div>
+                <div class="capability-item">Cross-Team Technical Coordination</div>
+                <div class="capability-item">Operational Workflow & Reporting</div>
+            </div>
+        </div>
+    </section>
+
     <section id="about" class="about">
         <div class="container">
             <h2 class="section-title">About Me</h2>
             <div class="about-content">
                 <div class="about-text">
-                    <p>
-                        Senior Data Center Engineer with expertise in 24/7 mission-critical operations, infrastructure monitoring, and SLA compliance. 
-                        Based in Bangkok, Thailand, with proven track record in optimizing data center performance, reducing MTTR, and managing complex network/infrastructure environments.
-                    </p>
-                    <p>
-                        Specialized in proactive monitoring, incident response, and operational excellence. Experience includes NOC/DCC operations, 
-                        real-time monitoring systems, infrastructure management, and cross-team coordination. Committed to continuous improvement 
-                        and leveraging automation to enhance operational efficiency.
-                    </p>
+                    <p>Infrastructure professional with hands-on experience in data center and NOC environments, supporting day-to-day operations, system monitoring, and incident follow-up activities.</p>
+                    <p>Comfortable working in shift-based environments, coordinating with internal teams, and maintaining infrastructure documentation and reporting routines.</p>
                     <div class="about-stats">
-                        <div class="stat">
-                            <h3>2+</h3>
-                            <p>Years in Current Role</p>
-                        </div>
-                        <div class="stat">
-                            <h3>24/7</h3>
-                            <p>Mission-Critical Ops</p>
-                        </div>
-                        <div class="stat">
-                            <h3>20-30%</h3>
-                            <p>Uptime Improvement</p>
-                        </div>
+                        <div class="stat"><h3>2+</h3><p>Years in Infrastructure Operations</p></div>
+                        <div class="stat"><h3>24/7</h3><p>Shift-Based Environment</p></div>
+                        <div class="stat"><h3>Ongoing</h3><p>Networking & Automation Growth</p></div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Education Section -->
-    <section id="education" class="education">
-        <div class="container">
-            <h2 class="section-title">Education</h2>
-            <div class="education-timeline">
-                <div class="education-item">
-                    <div class="education-marker"></div>
-                    <div class="education-content">
-                        <h3>Bachelor of Science in Information Technology</h3>
-                        <p class="school">Siam Technology Institute</p>
-                        <p class="date">2021 - 2024</p>
-                        <p class="description">
-                            Focused on network infrastructure, system administration, and data center operations. 
-                            Completed specialized projects in monitoring systems and infrastructure automation.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Skills Section -->
     <section id="skills" class="skills">
         <div class="container">
             <h2 class="section-title">Skills & Expertise</h2>
-            <div class="skills-grid">
-                <div class="skill-card">
-                    <div class="skill-icon">💻</div>
-                    <h3>Programming Languages</h3>
-                    <ul>
-                        <li>Python, SQL, C++, C, Java</li>
-                        <li>Scripting & Automation</li>
-                        <li>System-level Programming</li>
-                        <li>Network Protocols</li>
-                    </ul>
-                </div>
-
-                <div class="skill-card">
-                    <div class="skill-icon">🔧</div>
-                    <h3>Operations & Infrastructure</h3>
-                    <ul>
-                        <li>Linux, Network Monitoring</li>
-                        <li>Nagios, Zabbix, PRTG, Cacti</li>
-                        <li>Hardware Automation</li>
-                        <li>Incident Response, SOP Operations</li>
-                    </ul>
-                </div>
-
-                <div class="skill-card">
-                    <div class="skill-icon">📊</div>
-                    <h3>Data & Visualization</h3>
-                    <ul>
-                        <li>Excel, Power BI</li>
-                        <li>Data Analysis & Reporting</li>
-                        <li>Analytics Dashboards</li>
-                        <li>Performance Metrics</li>
-                    </ul>
-                </div>
-
-                <div class="skill-card">
-                    <div class="skill-icon">🖥️</div>
-                    <h3>Data Center Expertise</h3>
-                    <ul>
-                        <li>Server & GPU Troubleshooting</li>
-                        <li>OOB/BMC Tools</li>
-                        <li>Hardware & Cabling</li>
-                        <li>Access Control Systems</li>
-                    </ul>
-                </div>
-            </div>
+            <div class="skills-grid"></div>
         </div>
     </section>
 
-    <!-- Experience Section -->
     <section id="experience" class="experience">
         <div class="container">
             <h2 class="section-title">Professional Experience</h2>
-            <div class="experience-timeline">
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <h3>Senior Data Center Engineer</h3>
-                        <p class="company">Tech Hub Solutions (Bangkok, TH)</p>
-                        <p class="date">July 2025 - Present</p>
-                        <ul class="achievements">
-                            <li>Led 24/7 mission-critical data center operations, ensuring high availability and SLA compliance</li>
-                            <li>Improved infrastructure stability and SLA compliance through proactive monitoring and root cause analysis</li>
-                            <li>Optimized monitoring workflows, reducing MTTR by 30-40% compared to manual processes</li>
-                            <li>Automated operational reporting using Excel and Power BI, improving efficiency by 50-60%</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <h3>DCC & NOC Engineer</h3>
-                        <p class="company">TCC Technology – One Bangkok Project</p>
-                        <p class="date">July 2023 - July 2025</p>
-                        <ul class="achievements">
-                            <li>Supported 24/7 network and infrastructure monitoring, ensuring service continuity through real-time monitoring and incident triage</li>
-                            <li>Improved NOC operational efficiency through proactive monitoring of network, BMS, EMS, CCTV, and access systems</li>
-                            <li>Performed rapid incident triage and first-level troubleshooting, reducing MTTE and supporting escalation</li>
-                            <li>Analyzed system logs to identify recurring fault patterns and support root cause analysis</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+            <div class="experience-timeline"></div>
         </div>
     </section>
 
-    <!-- Projects Section -->
     <section id="projects" class="projects">
         <div class="container">
-            <h2 class="section-title">Featured Projects</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-image">
-                        <div class="project-placeholder">📊</div>
-                    </div>
-                    <div class="project-content">
-                        <h3>Portfolio & Resume Website</h3>
-                        <p class="tech-stack">HTML • CSS • JavaScript • Responsive Design</p>
-                        <p class="project-description">
-                            Built a modern, responsive portfolio website with dark mode support, contact forms, and mobile-first design. Hosted on Netlify with automatic deployments from GitHub.
-                        </p>
-                        <div class="project-links">
-                            <a href="https://github.com/TikkerLovely/MyProject" target="_blank" class="project-link">View Code</a>
-                            <a href="https://resume-chayangkul.netlify.app" target="_blank" class="project-link">Live Demo</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image">
-                        <div class="project-placeholder">⚙️</div>
-                    </div>
-                    <div class="project-content">
-                        <h3>Infrastructure Monitoring Automation</h3>
-                        <p class="tech-stack">Nagios • Zabbix • PRTG • Python • Excel</p>
-                        <p class="project-description">
-                            Implemented comprehensive monitoring infrastructure for 24/7 operations. Automated incident detection, escalation workflows, and operational reporting using enterprise monitoring tools. Reduced MTTR by 30-40%.
-                        </p>
-                        <div class="project-links">
-                            <a href="https://github.com/TikkerLovely" target="_blank" class="project-link">GitHub</a>
-                        </div>
-                    </div>
-
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image">
-                        <div class="project-placeholder">🔧</div>
-                    </div>
-                    <div class="project-content">
-                        <h3>Operational Incident & NOC Analytics Dashboard</h3>
-                        <p class="tech-stack">Power BI • Excel • Python • Real-time Data</p>
-                        <p class="project-description">
-                            Developed Power BI dashboards for NOC operations. Enabled management reviews with real-time incident analysis by date, category, and priority. Improved reporting efficiency by 50-60%.
-                        </p>
-                        <div class="project-links">
-                            <a href="https://github.com/TikkerLovely" target="_blank" class="project-link">GitHub</a>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="project-card">
-                    <div class="project-image">
-                        <div class="project-placeholder">🧪</div>
-                    </div>
-                    <div class="project-content">
-                        <h3>Live ETL Weather Operations Dashboard</h3>
-                        <p class="tech-stack">JavaScript • Open-Meteo API • Data Transformation • KPI Design</p>
-                        <p class="project-description">
-                            Built a browser-based ETL pipeline that extracts live weather data, transforms it into operational metrics, and loads a dashboard with KPIs, trend charts, and monitoring snapshots. Designed as a CV-ready showcase of data engineering fundamentals.
-                        </p>
-                        <div class="project-links">
-                            <a href="#etl-dashboard" class="project-link">View Dashboard</a>
-                            <a href="https://open-meteo.com/" target="_blank" class="project-link">API Source</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <h2 class="section-title">Projects</h2>
+            <div class="projects-grid"></div>
         </div>
     </section>
 
-    <!-- ETL Dashboard Section -->
-    <section id="etl-dashboard" class="etl-dashboard">
-        <div class="container">
-            <h2 class="section-title">Live ETL Operations Dashboard</h2>
-            <p class="section-subtitle">
-                Extracting live weather telemetry for Bangkok from a free API, transforming operational metrics, and loading the result into a real-time dashboard.
-            </p>
-
-            <div class="etl-flow">
-                <div class="etl-step">
-                    <h3>Extract</h3>
-                    <p>Open-Meteo public API for hourly weather telemetry</p>
-                </div>
-                <div class="etl-step">
-                    <h3>Transform</h3>
-                    <p>Aggregate 24-hour averages, risk flags, and reliability indicators</p>
-                </div>
-                <div class="etl-step">
-                    <h3>Load</h3>
-                    <p>Render KPI cards, chart, and operations table for portfolio viewers</p>
-                </div>
-            </div>
-
-            <div id="etl-status" class="etl-status">Loading live ETL data...</div>
-
-            <div class="etl-kpi-grid" id="etl-kpis"></div>
-
-            <div class="etl-visuals">
-                <div class="etl-panel">
-                    <h3>24-Hour Temperature Trend (°C)</h3>
-                    <div id="etl-chart" class="etl-chart" aria-label="Temperature chart"></div>
-                </div>
-
-                <div class="etl-panel">
-                    <h3>Recent Telemetry Snapshot</h3>
-                    <div class="etl-table-wrapper">
-                        <table class="etl-table">
-                            <thead>
-                                <tr>
-                                    <th>Time</th>
-                                    <th>Temp (°C)</th>
-                                    <th>Humidity (%)</th>
-                                    <th>Rain Risk (%)</th>
-                                </tr>
-                            </thead>
-                            <tbody id="etl-table-body"></tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
     <section id="contact" class="contact">
         <div class="container">
-            <h2 class="section-title">Get In Touch</h2>
-            <p class="section-subtitle">Let's collaborate and build something amazing together</p>
-            
+            <h2 class="section-title">Contact</h2>
             <div class="contact-wrapper">
                 <div class="contact-info">
                     <h3>Contact Information</h3>
                     <div class="contact-item">
-                        <span class="contact-icon">📧</span>
                         <div>
                             <p class="contact-label">Email</p>
                             <a href="mailto:chayangkul.somruk@gmail.com">chayangkul.somruk@gmail.com</a>
                         </div>
                     </div>
                     <div class="contact-item">
-                        <span class="contact-icon">📱</span>
                         <div>
-                            <p class="contact-label">Phone</p>
-                            <a href="tel:+66962980316">+66 96 298 0316</a>
+                            <p class="contact-label">GitHub</p>
+                            <a href="https://github.com/TikkerLovely" target="_blank" data-social-link="github">github.com/TikkerLovely</a>
                         </div>
                     </div>
                     <div class="contact-item">
-                        <span class="contact-icon">📍</span>
                         <div>
-                            <p class="contact-label">Location</p>
-                            <p>Bangkok, Thailand</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <span class="contact-icon">🔗</span>
-                        <div>
-                            <p class="contact-label">Social Links</p>
-                            <div class="social-buttons">
-                                <a href="https://linkedin.com/in/chayangkul-somruk-50b476312" target="_blank" class="social-btn" data-social-link="linkedin">LinkedIn</a>
-                                <a href="https://github.com/TikkerLovely" target="_blank" class="social-btn" data-social-link="github">GitHub</a>
-                            </div>
+                            <p class="contact-label">LinkedIn</p>
+                            <a href="https://linkedin.com/in/chayangkul-somruk-50b476312" target="_blank" data-social-link="linkedin">linkedin.com/in/chayangkul-somruk-50b476312</a>
                         </div>
                     </div>
                 </div>
@@ -404,35 +168,17 @@
                         <textarea id="message" name="message" rows="5" required></textarea>
                     </div>
                     <button type="submit" class="btn btn-primary btn-submit">Send Message</button>
-                    <p class="form-note">I'll get back to you within 24 hours</p>
                 </form>
-            </div>
-
-            <div class="cta-section">
-                <h3>Ready to Collaborate?</h3>
-                <p>Download my CV or schedule a call to discuss potential opportunities</p>
-                <div class="cta-buttons">
-                    <a href="assets/documents/Chayangkul_Somruk_CV.pdf" download class="btn btn-primary">📄 Download CV</a>
-                    <a href="https://calendly.com/yourprofile/consultation" class="btn btn-secondary" target="_blank">📅 Schedule Call</a>
-                </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <p>&copy; 2024-2026 Chayangkul Somruk. All rights reserved.</p>
-                <p class="footer-stats">
-                    Built with 💻 HTML/CSS/JS • Hosted on Netlify • Views: <span id="visitor-count">...</span>
-                </p>
-                <div class="footer-contact-grid">
-                    <a href="https://linkedin.com/in/chayangkul-somruk-50b476312" target="_blank" data-social-link="linkedin">LinkedIn</a>
-                    <a href="https://github.com/TikkerLovely" target="_blank" data-social-link="github">GitHub</a>
-                    <a href="mailto:chayangkul.somruk@gmail.com">chayangkul.somruk@gmail.com</a>
-                    <span>Bangkok, Thailand</span>
-                </div>
+                <p id="footer-name">Chayangkul Somruk</p>
+                <p class="footer-stats"><span id="footer-title">Infrastructure & Systems Engineer</span> • <span id="footer-location">Bangkok, Thailand</span></p>
+                <a href="assets/documents/Chayangkul_Somruk_CV.pdf" class="project-link" download target="_blank" rel="noopener">Download Resume</a>
             </div>
         </div>
         <script src="assets/js/app.js"></script>
@@ -440,7 +186,7 @@
         <script src="assets/js/dark-mode.js"></script>
         <script src="assets/js/contact.js"></script>
         <script src="assets/js/hamburger.js"></script>
-        <script src="assets/js/etl-dashboard.js"></script>
+        <script src="assets/js/weather.js"></script>
     </footer>
 </body>
 </html>

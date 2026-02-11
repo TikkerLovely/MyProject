@@ -36,12 +36,14 @@
         if (logo && personal.logo) logo.textContent = personal.logo;
 
         const pageTitle = query('title');
-        if (pageTitle && personal.name) pageTitle.textContent = `${personal.name} - Portfolio`;
+        if (pageTitle && personal.name && personal.title) {
+            pageTitle.textContent = `${personal.name} - ${personal.title}`;
+        }
     }
 
     function updateHeroSection(personal = {}) {
-        const nameSpan = query('.hero-title .highlight');
-        if (nameSpan && personal.name) nameSpan.textContent = personal.name;
+        const titleEl = query('.hero-title');
+        if (titleEl && personal.name) titleEl.textContent = personal.name;
 
         const subtitle = query('.hero-subtitle');
         if (subtitle && personal.title) subtitle.textContent = personal.title;
@@ -74,20 +76,18 @@
         const skillsGrid = query('.skills-grid');
         if (!skillsGrid || !Array.isArray(skills)) return;
 
-        const skillCards = skills
+        skillsGrid.innerHTML = skills
             .map((skill) => {
                 const items = (skill.items || []).map((item) => `<li>${item}</li>`).join('');
                 return `
                     <div class="skill-card">
-                        <div class="skill-icon">${skill.icon || '💡'}</div>
+                        <div class="skill-icon">${skill.icon || '•'}</div>
                         <h3>${skill.title || 'Skill Area'}</h3>
                         <ul>${items}</ul>
                     </div>
                 `;
             })
             .join('');
-
-        skillsGrid.innerHTML = skillCards;
     }
 
     function updateExperienceSection(experiences = []) {
@@ -96,10 +96,7 @@
 
         timeline.innerHTML = experiences
             .map((experience) => {
-                const achievements = (experience.achievements || [])
-                    .map((achievement) => `<li>${achievement}</li>`)
-                    .join('');
-
+                const achievements = (experience.achievements || []).map((item) => `<li>${item}</li>`).join('');
                 return `
                     <div class="timeline-item">
                         <div class="timeline-marker"></div>
@@ -128,23 +125,16 @@
                     )
                     .join('');
 
-                const detailBlocks = [
-                    project.problem ? `<p class="project-detail"><strong>Problem:</strong> ${project.problem}</p>` : '',
-                    project.solution ? `<p class="project-detail"><strong>Solution:</strong> ${project.solution}</p>` : '',
-                    project.result ? `<p class="project-detail"><strong>Result:</strong> ${project.result}</p>` : ''
-                ].join('');
-
                 return `
                     <div class="project-card">
                         <div class="project-image">
-                            <div class="project-placeholder">${project.emoji || '📁'}</div>
+                            <div class="project-placeholder">${project.emoji || '•'}</div>
                         </div>
                         <div class="project-content">
                             <h3>${project.title || ''}</h3>
-                            <p class="tech-stack">${project.tech || ''}</p>
                             <p class="project-description">${project.description || ''}</p>
-                            ${detailBlocks}
-                            <div class="project-links">${links || ''}</div>
+                            <p class="tech-stack">${project.tech || ''}</p>
+                            <div class="project-links">${links}</div>
                         </div>
                     </div>
                 `;
@@ -154,13 +144,10 @@
 
     function updateContactSection(personal = {}) {
         const emailLink = query('a[href^="mailto:"]');
-        if (emailLink && personal.email) emailLink.href = `mailto:${personal.email}`;
-
-        const phoneLink = query('a[href^="tel:"]');
-        if (phoneLink && personal.phone) phoneLink.href = `tel:${personal.phone}`;
-
-        const locationText = query('.contact-item:nth-child(3) p:last-child');
-        if (locationText && personal.location) locationText.textContent = personal.location;
+        if (emailLink && personal.email) {
+            emailLink.href = `mailto:${personal.email}`;
+            emailLink.textContent = personal.email;
+        }
 
         applySocialLinks(personal);
     }
@@ -174,22 +161,18 @@
         queryAll('[data-social-link]').forEach((link) => {
             const key = link.getAttribute('data-social-link');
             const url = socialMap[key];
-            if (url) {
-                link.href = url;
-            }
+            if (url) link.href = url;
         });
     }
 
     function updateFooter(personal = {}) {
-        const footerText = query('.footer-content p:first-child');
-        if (footerText && personal.name) {
-            footerText.textContent = `© 2024-2026 ${personal.name}. All rights reserved.`;
-        }
+        const footerName = query('#footer-name');
+        const footerTitle = query('#footer-title');
+        const footerLocation = query('#footer-location');
 
-        const footerLocation = query('.footer-contact-grid span');
-        if (footerLocation && personal.location) {
-            footerLocation.textContent = personal.location;
-        }
+        if (footerName && personal.name) footerName.textContent = personal.name;
+        if (footerTitle && personal.title) footerTitle.textContent = personal.title;
+        if (footerLocation && personal.location) footerLocation.textContent = personal.location;
     }
 
     document.addEventListener('DOMContentLoaded', loadPortfolioData);
