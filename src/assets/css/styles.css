@@ -2018,3 +2018,149 @@ body.bg-mist {
         margin-top: 0.8rem;
     }
 }
+
+/* ============================
+   Refinement Phase Polish
+   ============================ */
+
+body {
+    transition: background 0.8s ease-in-out, color 0.35s ease;
+}
+
+.hero {
+    position: relative;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at top left, rgba(255,255,255,0.05), transparent 60%);
+    pointer-events: none;
+    z-index: 0;
+}
+
+.hero > * {
+    position: relative;
+    z-index: 1;
+}
+
+/* Stronger weather theme depth */
+body.bg-clear-day {
+    background: linear-gradient(155deg, #4f8ef7 0%, #2f68d9 40%, #10223d 100%) !important;
+}
+
+body.bg-clear-night {
+    background: linear-gradient(160deg, #010714 0%, #0a1834 45%, #162a4d 100%) !important;
+}
+
+body.bg-cloudy {
+    background: linear-gradient(160deg, #425569 0%, #4f6276 40%, #263649 100%) !important;
+}
+
+body.bg-rain {
+    background: linear-gradient(160deg, #1b3a4f 0%, #2d4a62 38%, #101f33 100%) !important;
+}
+
+body.bg-storm {
+    background: linear-gradient(160deg, #040812 0%, #0b1424 42%, #202b3a 100%) !important;
+}
+
+body.bg-mist {
+    background: linear-gradient(160deg, #556270 0%, #4b5966 38%, #2d3b49 100%) !important;
+}
+
+.hero-title {
+    font-weight: 800;
+    margin-bottom: 0.75rem;
+}
+
+.hero-subtitle {
+    font-weight: 500;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+}
+
+.hero-description {
+    margin-top: 0.75rem;
+}
+
+/* Weather blend */
+.weather-card {
+    backdrop-filter: blur(18px);
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.08);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+    opacity: 0.95;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.weather-card:hover {
+    transform: translateY(-3px);
+}
+
+.weather-date {
+    font-size: 0.85rem;
+    opacity: 0.7;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+/* More whitespace + rhythmic section depth */
+.capabilities,
+.about,
+.skills,
+.experience,
+.projects,
+.contact {
+    padding-top: clamp(4.5rem, 6vw, 6rem);
+    padding-bottom: clamp(4.5rem, 6vw, 6rem);
+}
+
+.capabilities,
+.about,
+.skills {
+    background: rgba(2, 6, 23, 0.14);
+}
+
+.experience,
+.contact {
+    background: rgba(15, 23, 42, 0.22);
+}
+
+.projects {
+    background: rgba(2, 6, 23, 0.28);
+}
+
+.about-text,
+.about-text p {
+    color: rgba(226, 232, 240, 0.82);
+}
+
+/* Timeline visibility */
+.experience-timeline::before {
+    width: 3px;
+    background: linear-gradient(180deg, rgba(96, 165, 250, 0.9), rgba(147, 197, 253, 0.75));
+    box-shadow: 0 0 10px rgba(0, 150, 255, 0.4);
+}
+
+.capability-card {
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.capability-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(148, 163, 184, 0.45);
+}
+
+/* Optional minimal reveal animation */
+.reveal-section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.reveal-section.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}

@@ -175,5 +175,26 @@
         if (footerLocation && personal.location) footerLocation.textContent = personal.location;
     }
 
+
+    function initSectionReveal() {
+        const sections = queryAll('.reveal-section');
+        if (!sections.length) return;
+
+        const observer = new IntersectionObserver(
+            (entries, obs) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                        obs.unobserve(entry.target);
+                    }
+                });
+            },
+            { threshold: 0.12 }
+        );
+
+        sections.forEach((section) => observer.observe(section));
+    }
+
     document.addEventListener('DOMContentLoaded', loadPortfolioData);
+    document.addEventListener('DOMContentLoaded', initSectionReveal);
 })();
