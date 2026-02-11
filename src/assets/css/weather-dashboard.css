@@ -1,0 +1,130 @@
+:root {
+  --bg: #0b1220;
+  --text: #f8fafc;
+  --muted: #dbe7ff;
+  --glass: rgba(255, 255, 255, 0.12);
+  --glass-border: rgba(255, 255, 255, 0.3);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Inter", "Segoe UI", Roboto, Arial, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+}
+
+.dashboard {
+  min-height: 100vh;
+}
+
+.hero {
+  position: relative;
+  min-height: 44vh;
+  display: grid;
+  place-items: center;
+  padding: 4rem 1.5rem;
+  text-align: center;
+  background-image: url("https://images.unsplash.com/photo-1501630834273-4b5604d2ee31?auto=format&fit=crop&w=1800&q=80");
+  background-size: cover;
+  background-position: center;
+  isolation: isolate;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(2, 10, 23, 0.52);
+  z-index: -1;
+}
+
+.hero-content {
+  max-width: 760px;
+}
+
+.eyebrow {
+  margin: 0;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-size: 0.78rem;
+  color: #bfdbfe;
+}
+
+.hero h1 {
+  margin: 0.75rem 0 1rem;
+  font-size: clamp(2rem, 5vw, 3.3rem);
+  line-height: 1.15;
+}
+
+.subtitle {
+  margin: 0;
+  color: var(--muted);
+  font-size: clamp(1rem, 2.4vw, 1.2rem);
+}
+
+.weather-grid {
+  width: min(1100px, 92vw);
+  margin: -3rem auto 3rem;
+  display: grid;
+  gap: 1.15rem;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+}
+
+.weather-card {
+  background: var(--glass);
+  border: 1px solid var(--glass-border);
+  border-radius: 18px;
+  padding: 1.2rem;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 12px 34px rgba(0, 8, 20, 0.28);
+}
+
+.icon {
+  width: 62px;
+  height: 62px;
+  margin-bottom: 0.55rem;
+}
+
+.icon svg {
+  width: 100%;
+  height: 100%;
+  fill: none;
+  stroke: #f8fafc;
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.weather-card h2 {
+  margin: 0;
+  font-size: 1.05rem;
+}
+
+.temp {
+  margin: 0.6rem 0 0.35rem;
+  font-size: 2.05rem;
+  font-weight: 700;
+}
+
+.desc {
+  margin: 0;
+  color: #dbeafe;
+  font-size: 0.95rem;
+  line-height: 1.45;
+}
+
+@media (max-width: 680px) {
+  .hero {
+    min-height: 40vh;
+    padding: 3rem 1rem;
+  }
+
+  .weather-grid {
+    margin-top: -2.3rem;
+  }
+}

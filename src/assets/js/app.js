@@ -155,7 +155,8 @@
     function applySocialLinks(personal = {}) {
         const socialMap = {
             linkedin: personal.linkedin,
-            github: personal.github
+            github: personal.github,
+            email: personal.email ? `mailto:${personal.email}` : undefined
         };
 
         queryAll('[data-social-link]').forEach((link) => {
