@@ -9,6 +9,7 @@
     <meta name="author" content="Chayangkul Somruk">
     <meta name="theme-color" content="#0f172a">
     <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/weather-dashboard.css">
 </head>
 <body class="bg-clear-night">
     <div id="globalWeatherBg" class="global-weather-bg"></div>
@@ -63,6 +64,89 @@
                 <p id="weather-state" class="weather-state">Loading weather data...</p>
                 <div class="weather-forecast" id="weather-forecast"></div>
             </section>
+        </div>
+    </section>
+
+
+    <section id="weather-dashboard" class="weather-dashboard-section reveal-section" aria-label="Weather dashboard">
+        <div class="weather-dashboard-hero">
+            <div class="weather-dashboard-overlay"></div>
+            <div class="weather-dashboard-content container">
+                <p class="weather-dashboard-eyebrow">Live Forecast</p>
+                <h2>Modern Weather Dashboard</h2>
+                <p class="weather-dashboard-subtitle">Clear, minimal, and fast. Styled with glassmorphism cards and SVG condition icons.</p>
+            </div>
+        </div>
+        <div class="container weather-dashboard-grid">
+            <article class="weather-dashboard-card" aria-label="Sunny weather card">
+                <div class="weather-dashboard-icon" aria-hidden="true">
+                    <svg viewBox="0 0 64 64" role="img" focusable="false">
+                        <circle cx="32" cy="32" r="12" />
+                        <g>
+                            <line x1="32" y1="4" x2="32" y2="14" />
+                            <line x1="32" y1="50" x2="32" y2="60" />
+                            <line x1="4" y1="32" x2="14" y2="32" />
+                            <line x1="50" y1="32" x2="60" y2="32" />
+                            <line x1="11" y1="11" x2="18" y2="18" />
+                            <line x1="46" y1="46" x2="53" y2="53" />
+                            <line x1="46" y1="18" x2="53" y2="11" />
+                            <line x1="11" y1="53" x2="18" y2="46" />
+                        </g>
+                    </svg>
+                </div>
+                <h3>Sunny</h3>
+                <p class="weather-dashboard-temp">31°C</p>
+                <p class="weather-dashboard-desc">Bright skies and warm afternoon sunshine.</p>
+            </article>
+
+            <article class="weather-dashboard-card" aria-label="Rainy weather card">
+                <div class="weather-dashboard-icon" aria-hidden="true">
+                    <svg viewBox="0 0 64 64" role="img" focusable="false">
+                        <path d="M20 40h24a10 10 0 0 0 0-20 14 14 0 0 0-27-2A9 9 0 0 0 20 40z" />
+                        <line x1="24" y1="44" x2="20" y2="54" />
+                        <line x1="34" y1="44" x2="30" y2="56" />
+                        <line x1="44" y1="44" x2="40" y2="54" />
+                    </svg>
+                </div>
+                <h3>Rainy</h3>
+                <p class="weather-dashboard-temp">24°C</p>
+                <p class="weather-dashboard-desc">Light showers with steady cloud cover.</p>
+            </article>
+
+            <article class="weather-dashboard-card" aria-label="Snowy weather card">
+                <div class="weather-dashboard-icon" aria-hidden="true">
+                    <svg viewBox="0 0 64 64" role="img" focusable="false">
+                        <path d="M20 36h24a10 10 0 0 0 0-20 14 14 0 0 0-27-2A9 9 0 0 0 20 36z" />
+                        <g>
+                            <line x1="24" y1="44" x2="24" y2="56" />
+                            <line x1="18" y1="50" x2="30" y2="50" />
+                            <line x1="20" y1="46" x2="28" y2="54" />
+                            <line x1="28" y1="46" x2="20" y2="54" />
+                        </g>
+                        <g>
+                            <line x1="40" y1="44" x2="40" y2="56" />
+                            <line x1="34" y1="50" x2="46" y2="50" />
+                            <line x1="36" y1="46" x2="44" y2="54" />
+                            <line x1="44" y1="46" x2="36" y2="54" />
+                        </g>
+                    </svg>
+                </div>
+                <h3>Snowy</h3>
+                <p class="weather-dashboard-temp">-2°C</p>
+                <p class="weather-dashboard-desc">Soft snowfall with calm winds overnight.</p>
+            </article>
+
+            <article class="weather-dashboard-card" aria-label="Thunderstorm weather card">
+                <div class="weather-dashboard-icon" aria-hidden="true">
+                    <svg viewBox="0 0 64 64" role="img" focusable="false">
+                        <path d="M20 36h24a10 10 0 0 0 0-20 14 14 0 0 0-27-2A9 9 0 0 0 20 36z" />
+                        <polyline points="32,38 26,50 34,50 29,60 42,45 34,45 38,38" />
+                    </svg>
+                </div>
+                <h3>Thunderstorm</h3>
+                <p class="weather-dashboard-temp">21°C</p>
+                <p class="weather-dashboard-desc">Heavy clouds, lightning, and sudden rain bursts.</p>
+            </article>
         </div>
     </section>
 

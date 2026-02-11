@@ -1,33 +1,12 @@
-:root {
-  --bg: #0b1220;
-  --text: #f8fafc;
-  --muted: #dbe7ff;
-  --glass: rgba(255, 255, 255, 0.12);
-  --glass-border: rgba(255, 255, 255, 0.3);
+.weather-dashboard-section {
+  padding: 0 0 3rem;
 }
 
-* {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  min-height: 100vh;
-  font-family: "Inter", "Segoe UI", Roboto, Arial, sans-serif;
-  color: var(--text);
-  background: var(--bg);
-}
-
-.dashboard {
-  min-height: 100vh;
-}
-
-.hero {
+.weather-dashboard-hero {
   position: relative;
-  min-height: 44vh;
+  min-height: 38vh;
   display: grid;
-  place-items: center;
-  padding: 4rem 1.5rem;
+  align-items: center;
   text-align: center;
   background-image: url("https://images.unsplash.com/photo-1501630834273-4b5604d2ee31?auto=format&fit=crop&w=1800&q=80");
   background-size: cover;
@@ -35,18 +14,19 @@ body {
   isolation: isolate;
 }
 
-.hero-overlay {
+.weather-dashboard-overlay {
   position: absolute;
   inset: 0;
   background: rgba(2, 10, 23, 0.52);
   z-index: -1;
 }
 
-.hero-content {
-  max-width: 760px;
+.weather-dashboard-content {
+  padding: 3.5rem 1rem;
+  color: #f8fafc;
 }
 
-.eyebrow {
+.weather-dashboard-eyebrow {
   margin: 0;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -54,43 +34,43 @@ body {
   color: #bfdbfe;
 }
 
-.hero h1 {
+.weather-dashboard-content h2 {
   margin: 0.75rem 0 1rem;
-  font-size: clamp(2rem, 5vw, 3.3rem);
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
   line-height: 1.15;
 }
 
-.subtitle {
+.weather-dashboard-subtitle {
   margin: 0;
-  color: var(--muted);
-  font-size: clamp(1rem, 2.4vw, 1.2rem);
+  color: #dbe7ff;
+  font-size: clamp(1rem, 2.1vw, 1.15rem);
 }
 
-.weather-grid {
-  width: min(1100px, 92vw);
-  margin: -3rem auto 3rem;
+.weather-dashboard-grid {
+  margin-top: -2.5rem;
   display: grid;
   gap: 1.15rem;
   grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
 }
 
-.weather-card {
-  background: var(--glass);
-  border: 1px solid var(--glass-border);
+.weather-dashboard-card {
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 18px;
   padding: 1.2rem;
+  color: #f8fafc;
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   box-shadow: 0 12px 34px rgba(0, 8, 20, 0.28);
 }
 
-.icon {
+.weather-dashboard-icon {
   width: 62px;
   height: 62px;
   margin-bottom: 0.55rem;
 }
 
-.icon svg {
+.weather-dashboard-icon svg {
   width: 100%;
   height: 100%;
   fill: none;
@@ -100,18 +80,18 @@ body {
   stroke-linejoin: round;
 }
 
-.weather-card h2 {
+.weather-dashboard-card h3 {
   margin: 0;
   font-size: 1.05rem;
 }
 
-.temp {
+.weather-dashboard-temp {
   margin: 0.6rem 0 0.35rem;
   font-size: 2.05rem;
   font-weight: 700;
 }
 
-.desc {
+.weather-dashboard-desc {
   margin: 0;
   color: #dbeafe;
   font-size: 0.95rem;
@@ -119,12 +99,15 @@ body {
 }
 
 @media (max-width: 680px) {
-  .hero {
-    min-height: 40vh;
+  .weather-dashboard-hero {
+    min-height: 34vh;
+  }
+
+  .weather-dashboard-content {
     padding: 3rem 1rem;
   }
 
-  .weather-grid {
-    margin-top: -2.3rem;
+  .weather-dashboard-grid {
+    margin-top: -2rem;
   }
 }
