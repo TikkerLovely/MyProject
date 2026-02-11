@@ -1,113 +1,116 @@
-.weather-dashboard-section {
-  padding: 0 0 3rem;
-}
+/*
+  Weather-dashboard visual layer for main index page.
+  Keeps existing index content/data while applying the modern dashboard look.
+*/
 
-.weather-dashboard-hero {
+.hero.hero-professional {
   position: relative;
-  min-height: 38vh;
-  display: grid;
-  align-items: center;
-  text-align: center;
+  min-height: 80vh;
+  padding-top: 7.5rem;
+  padding-bottom: 3rem;
   background-image: url("https://images.unsplash.com/photo-1501630834273-4b5604d2ee31?auto=format&fit=crop&w=1800&q=80");
   background-size: cover;
   background-position: center;
-  isolation: isolate;
 }
 
-.weather-dashboard-overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(2, 10, 23, 0.52);
-  z-index: -1;
+.hero.hero-professional .hero-overlay {
+  background: rgba(2, 10, 23, 0.56);
 }
 
-.weather-dashboard-content {
-  padding: 3.5rem 1rem;
-  color: #f8fafc;
+.hero-content-centered {
+  position: relative;
+  z-index: 2;
 }
 
-.weather-dashboard-eyebrow {
-  margin: 0;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  font-size: 0.78rem;
-  color: #bfdbfe;
+.hero-text {
+  max-width: 760px;
+  margin: 0 auto;
+  text-align: center;
 }
 
-.weather-dashboard-content h2 {
-  margin: 0.75rem 0 1rem;
-  font-size: clamp(1.8rem, 4vw, 2.8rem);
-  line-height: 1.15;
+.hero-subtitle {
+  color: #cbdcf7;
 }
 
-.weather-dashboard-subtitle {
-  margin: 0;
-  color: #dbe7ff;
-  font-size: clamp(1rem, 2.1vw, 1.15rem);
+.hero-description {
+  color: #deebff;
 }
 
-.weather-dashboard-grid {
-  margin-top: -2.5rem;
-  display: grid;
-  gap: 1.15rem;
-  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+.hero-buttons {
+  justify-content: center;
 }
 
-.weather-dashboard-card {
+.social-links {
+  justify-content: center;
+}
+
+.weather-wrap {
+  position: relative;
+  z-index: 2;
+  margin-top: 2rem;
+}
+
+.weather-glass.weather-card {
+  max-width: 1000px;
+  margin: 0 auto;
   background: rgba(255, 255, 255, 0.12);
   border: 1px solid rgba(255, 255, 255, 0.3);
-  border-radius: 18px;
-  padding: 1.2rem;
-  color: #f8fafc;
+  border-radius: 20px;
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   box-shadow: 0 12px 34px rgba(0, 8, 20, 0.28);
 }
 
-.weather-dashboard-icon {
-  width: 62px;
-  height: 62px;
-  margin-bottom: 0.55rem;
+.weather-city,
+.weather-date,
+#weather-condition,
+.weather-state {
+  color: #e9f2ff;
 }
 
-.weather-dashboard-icon svg {
-  width: 100%;
-  height: 100%;
-  fill: none;
-  stroke: #f8fafc;
-  stroke-width: 3;
-  stroke-linecap: round;
-  stroke-linejoin: round;
+.weather-current h3 {
+  color: #ffffff;
 }
 
-.weather-dashboard-card h3 {
-  margin: 0;
-  font-size: 1.05rem;
+.weather-forecast {
+  display: grid;
+  gap: 0.85rem;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
 }
 
-.weather-dashboard-temp {
-  margin: 0.6rem 0 0.35rem;
-  font-size: 2.05rem;
-  font-weight: 700;
+.forecast-day {
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: 14px;
 }
 
-.weather-dashboard-desc {
-  margin: 0;
-  color: #dbeafe;
-  font-size: 0.95rem;
-  line-height: 1.45;
+/* Reuse dashboard-like glass style in main content cards */
+.capability-card,
+.about-text,
+.stat,
+.skill-category,
+.experience-item,
+.project-card {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
 
-@media (max-width: 680px) {
-  .weather-dashboard-hero {
-    min-height: 34vh;
+@media (max-width: 768px) {
+  .hero.hero-professional {
+    min-height: 72vh;
+    padding-top: 6.5rem;
   }
 
-  .weather-dashboard-content {
-    padding: 3rem 1rem;
+  .hero-text {
+    text-align: left;
   }
 
-  .weather-dashboard-grid {
-    margin-top: -2rem;
+  .hero-buttons,
+  .social-links {
+    justify-content: flex-start;
   }
 }
