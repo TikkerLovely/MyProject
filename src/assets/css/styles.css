@@ -2078,25 +2078,26 @@ body.bg-mist {
 .hero-subtitle {
     font-weight: 500;
     letter-spacing: 1px;
-    margin-bottom: 1rem;
+    margin-bottom: 1.35rem;
 }
 
 .hero-description {
-    margin-top: 0.75rem;
+    margin-top: 0.85rem;
 }
 
 /* Weather blend */
 .weather-card {
     backdrop-filter: blur(18px);
-    background: rgba(255,255,255,0.06);
-    border: 1px solid rgba(255,255,255,0.08);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.25);
-    opacity: 0.95;
-    transition: transform 0.3s ease, background 0.3s ease;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.06);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.25), 0 0 26px rgba(148, 163, 184, 0.10);
+    opacity: 0.93;
+    transition: transform 0.3s ease, background 0.3s ease, border-color 0.3s ease;
 }
 
 .weather-card:hover {
     transform: translateY(-3px);
+    border-color: rgba(255,255,255,0.12);
 }
 
 .weather-date {
@@ -2113,23 +2114,32 @@ body.bg-mist {
 .experience,
 .projects,
 .contact {
-    padding-top: clamp(4.5rem, 6vw, 6rem);
-    padding-bottom: clamp(4.5rem, 6vw, 6rem);
+    padding-top: clamp(4rem, 5.2vw, 5.2rem);
+    padding-bottom: clamp(4rem, 5.2vw, 5.2rem);
 }
 
-.capabilities,
-.about,
+.capabilities {
+    background: rgba(17, 24, 39, 0.18);
+}
+
+.about {
+    background: rgba(8, 14, 28, 0.26);
+}
+
 .skills {
-    background: rgba(2, 6, 23, 0.14);
+    background: rgba(18, 29, 49, 0.22);
 }
 
-.experience,
-.contact {
-    background: rgba(15, 23, 42, 0.22);
+.experience {
+    background: rgba(14, 22, 38, 0.26);
 }
 
 .projects {
-    background: rgba(2, 6, 23, 0.28);
+    background: rgba(4, 10, 22, 0.34);
+}
+
+.contact {
+    background: linear-gradient(180deg, rgba(7, 12, 24, 0.36), rgba(10, 18, 33, 0.50));
 }
 
 .about-text,
@@ -2145,22 +2155,39 @@ body.bg-mist {
 }
 
 .capability-card {
-    transition: transform 0.3s ease, border-color 0.3s ease;
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 6px 16px rgba(2, 6, 23, 0.18);
 }
 
 .capability-card:hover {
     transform: translateY(-4px);
     border-color: rgba(148, 163, 184, 0.45);
+    box-shadow: 0 10px 24px rgba(2, 6, 23, 0.26);
 }
 
 /* Optional minimal reveal animation */
 .reveal-section {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+body.reveal-enabled .reveal-section {
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
-.reveal-section.is-visible {
+body.reveal-enabled .reveal-section.is-visible {
     opacity: 1;
     transform: translateY(0);
+}
+
+.about-stats .stat h3 {
+    font-size: 2rem;
+    opacity: 0.9;
+}
+
+.about-stats .stat p {
+    font-size: 0.9rem;
+    opacity: 0.85;
 }

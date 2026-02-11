@@ -178,6 +178,7 @@
 
     function initSectionReveal() {
         const sections = queryAll('.reveal-section');
+        document.body.classList.add('reveal-enabled');
         if (!sections.length) return;
 
         const observer = new IntersectionObserver(
