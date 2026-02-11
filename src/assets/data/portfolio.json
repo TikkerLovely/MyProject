@@ -2,75 +2,64 @@
   "personal": {
     "name": "Chayangkul Somruk",
     "logo": "CS",
-    "title": "Senior Data Center Engineer",
-    "description": "24/7 mission-critical data center operations specialist. Experienced in infrastructure stability, SLA compliance, monitoring, and incident response. Passionate about operational excellence and system reliability.",
+    "title": "Infrastructure & Systems Engineer",
+    "description": "Working in 24/7 infrastructure environments, handling system monitoring, incident coordination, and infrastructure tasks. Background in data center operations with growing focus on networking and automation.",
     "email": "chayangkul.somruk@gmail.com",
     "phone": "+66962980316",
-    "location": "Bangkok, Thailand (Open to relocating internationally)",
-    "linkedin": "https://linkedin.com/in/Chayangkul-Somruk",
-    "github": "https://github.com/chayangkul",
-    "twitter": "https://twitter.com/chayangkul"
+    "location": "Bangkok, Thailand",
+    "linkedin": "https://linkedin.com/in/chayangkul-somruk-50b476312",
+    "github": "https://github.com/TikkerLovely"
   },
   "about": {
     "title": "About Me",
     "paragraphs": [
-      "Senior Data Center Engineer with expertise in 24/7 mission-critical operations, infrastructure monitoring, and SLA compliance. Based in Bangkok, Thailand, with proven track record in optimizing data center performance, reducing MTTR, and managing complex network/infrastructure environments.",
-      "Specialized in proactive monitoring, incident response, and operational excellence. Experience includes NOC/DCC operations, real-time monitoring systems, infrastructure management, and cross-team coordination. Committed to continuous improvement and leveraging automation to enhance operational efficiency."
+      "Infrastructure and systems professional with practical experience in data center operations, system monitoring, and incident coordination in shift-based environments.",
+      "Currently developing stronger networking and automation skills while continuing to support reliable day-to-day infrastructure operations."
     ],
     "stats": [
       {
         "number": "2+",
-        "label": "Years in Current Role"
+        "label": "Years in Infrastructure Operations"
       },
       {
         "number": "24/7",
-        "label": "Mission-Critical Ops"
+        "label": "Shift-Based Environment"
       },
       {
-        "number": "20-30%",
-        "label": "Uptime Improvement"
+        "number": "Ongoing",
+        "label": "Networking & Automation Growth"
       }
     ]
   },
   "skills": [
     {
-      "icon": "💻",
-      "title": "Programming Languages",
+      "icon": "\u2022",
+      "title": "Infrastructure Operations",
       "items": [
-        "Python, SQL, C++, C, Java",
-        "Scripting & Automation",
-        "System-level Programming",
-        "Network Protocols"
+        "Data Center Routine Operations",
+        "System Health Monitoring",
+        "Incident Logging and Coordination",
+        "Operational Checklist Execution"
       ]
     },
     {
-      "icon": "🔧",
-      "title": "Operations & Infrastructure",
+      "icon": "\u2022",
+      "title": "Networking & Systems",
       "items": [
-        "Linux, Network Monitoring",
-        "Nagios, Zabbix, PRTG, Cacti",
-        "Hardware Automation",
-        "Incident Response, SOP Operations"
+        "Basic Network Troubleshooting",
+        "Linux Environment Handling",
+        "Server Hardware Handling",
+        "Access and Connectivity Checks"
       ]
     },
     {
-      "icon": "📊",
-      "title": "Data & Visualization",
+      "icon": "\u2022",
+      "title": "Reporting & Communication",
       "items": [
-        "Excel, Power BI",
-        "Data Analysis & Reporting",
-        "Analytics Dashboards",
-        "Performance Metrics"
-      ]
-    },
-    {
-      "icon": "🖥️",
-      "title": "Data Center Expertise",
-      "items": [
-        "Server & GPU Troubleshooting",
-        "OOB/BMC Tools",
-        "Hardware & Cabling",
-        "Access Control Systems"
+        "Daily and Shift Reporting",
+        "Issue Tracking Documentation",
+        "Cross-Team Communication",
+        "Operational Status Updates"
       ]
     }
   ],
@@ -80,49 +69,63 @@
       "company": "Tech Hub Solutions (Bangkok, TH)",
       "date": "July 2025 - Present",
       "achievements": [
-        "Led 24/7 mission-critical data center operations, ensuring high availability and SLA compliance",
-        "Improved infrastructure stability and SLA compliance through proactive monitoring and root cause analysis",
-        "Optimized monitoring workflows, reducing MTTR by 30-40% compared to manual processes",
-        "Automated operational reporting using Excel and Power BI, improving efficiency by 50-60%"
+        "Performed routine infrastructure monitoring and support during assigned shifts.",
+        "Handled incident coordination with internal teams and followed escalation procedures.",
+        "Maintained operational records and updated status reports for ongoing activities.",
+        "Executed infrastructure-related tasks following standard operating guidelines."
       ]
     },
     {
       "position": "DCC & NOC Engineer",
-      "company": "TCC Technology – One Bangkok Project",
+      "company": "TCC Technology \u2013 One Bangkok Project",
       "date": "July 2023 - July 2025",
       "achievements": [
-        "Supported 24/7 network and infrastructure monitoring, ensuring service continuity through real-time monitoring and incident triage",
-        "Improved NOC operational efficiency through proactive monitoring of network, BMS, EMS, CCTV, and access systems",
-        "Performed rapid incident triage and first-level troubleshooting, reducing MTTE and supporting escalation",
-        "Analyzed system logs to identify recurring fault patterns and support root cause analysis"
+        "Monitored network and facility-related systems as part of daily operations.",
+        "Coordinated first-response actions and communicated updates to relevant teams.",
+        "Conducted initial checks to support issue diagnosis before escalation.",
+        "Maintained shift handover notes and contributed to incident documentation."
       ]
     }
   ],
   "projects": [
     {
-      "emoji": "📊",
-      "title": "Operational Incident & NOC Analytics Dashboard",
-      "tech": "Power BI • Excel • Python • Real-time Data",
-      "description": "Developed Power BI dashboards for NOC and Data Center Command Center operations. Enabled management reviews and operational decision-making with real-time incident analysis by date, category, and priority."
+      "emoji": "\u2022",
+      "title": "Operations Reporting Dashboard",
+      "tech": "Excel \u2022 Power BI",
+      "description": "Built a simple reporting view for shift and incident updates to improve day-to-day visibility for team communication.",
+      "links": [
+        {
+          "label": "GitHub",
+          "url": "https://github.com/TikkerLovely",
+          "external": true
+        }
+      ]
     },
     {
-      "emoji": "⚙️",
-      "title": "Infrastructure Monitoring Automation",
-      "tech": "Nagios • Zabbix • PRTG • Python • Excel",
-      "description": "Implemented comprehensive monitoring infrastructure for 24/7 operations. Automated incident detection, escalation workflows, and operational reporting using enterprise monitoring tools."
+      "emoji": "\u2022",
+      "title": "Monitoring Workflow Notes",
+      "tech": "Documentation \u2022 SOP",
+      "description": "Organized monitoring and handover steps into clear operational notes for consistent shift execution.",
+      "links": [
+        {
+          "label": "GitHub",
+          "url": "https://github.com/TikkerLovely",
+          "external": true
+        }
+      ]
     },
     {
-      "emoji": "🔧",
-      "title": "Incident Response & SOP Operations",
-      "tech": "Network • Infrastructure • System Analysis • Automation",
-      "description": "Designed and implemented incident response procedures with cross-team coordination. Developed structured escalation processes, SOP-based operations, and proactive monitoring systems."
-    }
-  ],
-  "education": [
-    {
-      "school": "Bangkok University",
-      "degree": "Bachelor of Engineering (B.Eng.) Major: Computer Engineering",
-      "gpa": "Cumulative GPA: 3.00/4.00 (Second Class Honors)"
+      "emoji": "\u2022",
+      "title": "Infrastructure Status Page Prototype",
+      "tech": "HTML \u2022 CSS \u2022 JavaScript",
+      "description": "Created a lightweight internal-style status view prototype for presenting current service conditions in a readable format.",
+      "links": [
+        {
+          "label": "GitHub",
+          "url": "https://github.com/TikkerLovely",
+          "external": true
+        }
+      ]
     }
   ]
 }

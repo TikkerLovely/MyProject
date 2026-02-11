@@ -1,24 +1,26 @@
-// Hamburger Menu Toggle
-const hamburgerMenu = document.getElementById('hamburger-menu');
-const navMenu = document.querySelector('.nav-menu');
+(() => {
+    const hamburgerMenu = document.getElementById('hamburger-menu');
+    const navMenu = document.querySelector('.nav-menu');
 
-hamburgerMenu.addEventListener('click', () => {
-    hamburgerMenu.classList.toggle('active');
-    navMenu.classList.toggle('active');
-});
+    if (!hamburgerMenu || !navMenu) return;
 
-// Close menu when clicking on a nav link
-document.querySelectorAll('.nav-link').forEach(link => {
-    link.addEventListener('click', () => {
+    const closeMenu = () => {
         hamburgerMenu.classList.remove('active');
         navMenu.classList.remove('active');
+    };
+
+    hamburgerMenu.addEventListener('click', () => {
+        hamburgerMenu.classList.toggle('active');
+        navMenu.classList.toggle('active');
     });
-});
 
-// Close menu when clicking outside
-document.addEventListener('click', (e) => {
-    if (!e.target.closest('.nav-container')) {
-        hamburgerMenu.classList.remove('active');
-        navMenu.classList.remove('active');
-    }
-});
+    document.querySelectorAll('.nav-link').forEach((link) => {
+        link.addEventListener('click', closeMenu);
+    });
+
+    document.addEventListener('click', (event) => {
+        if (!event.target.closest('.nav-container')) {
+            closeMenu();
+        }
+    });
+})();

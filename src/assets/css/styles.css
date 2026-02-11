@@ -1373,3 +1373,897 @@ body.dark-mode .cta-buttons .btn:hover {
         text-align: center;
     }
 }
+/* ============================
+   ETL Dashboard
+   ============================ */
+
+.etl-dashboard {
+    padding: var(--spacing-2xl) 0;
+    background: linear-gradient(135deg, rgba(14, 127, 191, 0.08) 0%, rgba(0, 217, 255, 0.12) 100%);
+}
+
+.etl-flow {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(180px, 1fr));
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-lg);
+}
+
+.etl-step {
+    background: white;
+    padding: var(--spacing-md);
+    border-left: 4px solid var(--primary);
+    border-radius: 10px;
+    box-shadow: var(--shadow-sm);
+}
+
+.etl-step h3 {
+    margin-bottom: var(--spacing-xs);
+}
+
+.etl-status {
+    margin-bottom: var(--spacing-lg);
+    padding: var(--spacing-sm) var(--spacing-md);
+    border-radius: 8px;
+    background: rgba(0, 102, 204, 0.08);
+    color: var(--text);
+    font-weight: 600;
+}
+
+.etl-status.success {
+    background: rgba(34, 197, 94, 0.16);
+}
+
+.etl-status.error {
+    background: rgba(239, 68, 68, 0.18);
+}
+
+.etl-kpi-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(140px, 1fr));
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-lg);
+}
+
+.etl-kpi-card {
+    background: white;
+    padding: var(--spacing-md);
+    border-radius: 10px;
+    box-shadow: var(--shadow-sm);
+}
+
+.etl-kpi-label {
+    color: var(--text-light);
+    font-size: 0.85rem;
+    margin-bottom: var(--spacing-xs);
+}
+
+.etl-kpi-value {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--text);
+}
+
+.etl-visuals {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-lg);
+}
+
+.etl-panel {
+    background: white;
+    border-radius: 12px;
+    padding: var(--spacing-lg);
+    box-shadow: var(--shadow-sm);
+}
+
+.etl-chart {
+    margin-top: var(--spacing-md);
+    height: 230px;
+    display: flex;
+    align-items: flex-end;
+    gap: 0.3rem;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: var(--spacing-sm);
+}
+
+.etl-bar-wrap {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    min-width: 16px;
+}
+
+.etl-bar {
+    width: 100%;
+    max-width: 18px;
+    background: var(--gradient-primary);
+    border-radius: 6px 6px 0 0;
+}
+
+.etl-bar-label {
+    font-size: 0.65rem;
+    color: var(--text-muted);
+    margin-top: 0.35rem;
+    min-height: 0.8rem;
+}
+
+.etl-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: var(--spacing-md);
+}
+
+.etl-table th,
+.etl-table td {
+    text-align: left;
+    padding: 0.55rem;
+    border-bottom: 1px solid var(--border);
+    font-size: 0.92rem;
+}
+
+body.dark-mode .etl-step,
+body.dark-mode .etl-kpi-card,
+body.dark-mode .etl-panel {
+    background: #1a2332;
+}
+
+@media (max-width: 900px) {
+    .etl-flow,
+    .etl-kpi-grid,
+    .etl-visuals {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ============================
+   Professional Polish Overrides
+   ============================ */
+
+:root {
+    --section-padding: 5rem;
+}
+
+body {
+    font-size: 16px;
+    line-height: 1.75;
+}
+
+.hero,
+.about,
+.education,
+.skills,
+.experience,
+.projects,
+.etl-dashboard,
+.contact {
+    padding: var(--section-padding) 0;
+}
+
+.hero-subtitle {
+    font-size: 1.9rem;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+}
+
+.hero-description,
+.about-text,
+.achievements li,
+.project-description,
+.project-detail,
+.contact-item,
+.etl-table th,
+.etl-table td {
+    font-size: 1rem;
+}
+
+.profile-card {
+    width: min(360px, 100%);
+    min-height: 300px;
+    border-radius: 16px;
+    padding: var(--spacing-xl);
+    background: #ffffff;
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow-md);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: var(--spacing-md);
+}
+
+.profile-avatar {
+    width: 88px;
+    height: 88px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    font-size: 2rem;
+    font-weight: 800;
+    color: #fff;
+    background: #0e7fbf;
+}
+
+.profile-role {
+    color: var(--text);
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.profile-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem;
+}
+
+.profile-meta span {
+    background: var(--light);
+    border: 1px solid var(--border);
+    color: var(--text-light);
+    border-radius: 999px;
+    padding: .35rem .65rem;
+    font-size: .82rem;
+    font-weight: 600;
+}
+
+.projects-grid {
+    gap: var(--spacing-lg);
+}
+
+.project-card {
+    background: #ffffff;
+    border: 1px solid var(--border);
+}
+
+.project-detail {
+    color: var(--text-light);
+    margin-bottom: .5rem;
+}
+
+.project-detail strong {
+    color: var(--text);
+}
+
+.etl-dashboard {
+    background: var(--light);
+}
+
+.etl-step,
+.etl-kpi-card,
+.etl-panel {
+    padding: var(--spacing-lg);
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow-sm);
+}
+
+.etl-flow,
+.etl-kpi-grid,
+.etl-visuals {
+    gap: var(--spacing-lg);
+}
+
+.etl-table th {
+    color: var(--text);
+    font-weight: 700;
+    background: rgba(0,0,0,0.02);
+}
+
+.footer {
+    background: #0f1419;
+}
+
+.footer-contact-grid {
+    margin-top: var(--spacing-md);
+    display: grid;
+    grid-template-columns: repeat(2, minmax(220px, 1fr));
+    gap: .5rem 1rem;
+    text-align: left;
+}
+
+.footer-contact-grid a,
+.footer-contact-grid span {
+    color: #cbd5e0;
+    text-decoration: none;
+    font-size: .95rem;
+}
+
+.footer-contact-grid a:hover {
+    color: #ffffff;
+}
+
+body.dark-mode .profile-card,
+body.dark-mode .project-card,
+body.dark-mode .etl-step,
+body.dark-mode .etl-kpi-card,
+body.dark-mode .etl-panel {
+    background: #1a2332;
+}
+
+@media (max-width: 768px) {
+    :root { --section-padding: 4rem; }
+
+    .hero-subtitle {
+        font-size: 1.4rem;
+    }
+
+    .footer-contact-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+}
+
+/* ============================
+   Infrastructure Portfolio Refresh
+   ============================ */
+
+body {
+    background: linear-gradient(160deg, #0b1220, #131d32);
+    color: #e5e7eb;
+}
+
+.section-title {
+    background: none;
+    color: #e2e8f0;
+    -webkit-text-fill-color: currentColor;
+}
+
+.hero-professional {
+    background: transparent;
+    min-height: auto;
+    padding-top: 7rem;
+}
+
+.hero-title {
+    color: #f8fafc;
+    font-size: clamp(2rem, 5vw, 3.2rem);
+}
+
+.hero-subtitle {
+    color: #c7d2fe;
+    font-size: 1.4rem;
+}
+
+.hero-description {
+    color: #cbd5e1;
+    max-width: 60ch;
+}
+
+.profile-card,
+.skill-card,
+.timeline-content,
+.project-card,
+.contact-form,
+.stat,
+.weather-glass,
+.capability-item {
+    background: rgba(15, 23, 42, 0.55);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(148, 163, 184, 0.25);
+    box-shadow: none;
+    color: #e2e8f0;
+}
+
+.profile-role,
+.skill-card h3,
+.timeline-content h3,
+.project-content h3,
+.contact-info h3,
+.form-group label,
+.etl-panel h3 {
+    color: #f8fafc;
+}
+
+.weather-wrap {
+    margin-top: 1rem;
+}
+
+.weather-glass {
+    border-radius: 14px;
+    padding: 1rem 1.25rem;
+}
+
+.weather-date,
+.weather-city,
+.weather-state,
+.weather-current p,
+.forecast-day p {
+    color: #cbd5e1;
+}
+
+.weather-current {
+    display: flex;
+    align-items: baseline;
+    gap: 1rem;
+}
+
+.weather-current h3 {
+    font-size: 2rem;
+    color: #f8fafc;
+}
+
+.weather-forecast {
+    margin-top: .8rem;
+    display: grid;
+    grid-template-columns: repeat(7, minmax(90px, 1fr));
+    gap: .5rem;
+}
+
+.forecast-day {
+    background: rgba(30, 41, 59, 0.6);
+    border: 1px solid rgba(148, 163, 184, 0.2);
+    border-radius: 10px;
+    padding: .55rem;
+    font-size: .82rem;
+}
+
+.capabilities {
+    padding: 2rem 0 3rem;
+}
+
+.capabilities-grid {
+    display: grid;
+    gap: .8rem;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.capability-item {
+    padding: .8rem 1rem;
+    border-radius: 10px;
+    font-size: .95rem;
+}
+
+.about,
+.skills,
+.experience,
+.projects,
+.contact {
+    background: transparent;
+}
+
+.tech-stack,
+.project-description,
+.achievements li,
+.contact-label,
+.contact-item a,
+.skill-card li,
+.footer-stats,
+.footer-content p {
+    color: #cbd5e1;
+}
+
+.project-image {
+    background: rgba(15, 23, 42, 0.35);
+    height: 120px;
+}
+
+.project-placeholder,
+.skill-icon,
+.contact-icon,
+.avatar-placeholder,
+.etl-dashboard {
+    display: none;
+}
+
+.btn-primary {
+    background: #334155;
+}
+
+.btn-secondary {
+    border-color: #64748b;
+    color: #e2e8f0;
+}
+
+.btn-secondary:hover,
+.btn-primary:hover,
+.project-link:hover {
+    background: #475569;
+    color: #fff;
+}
+
+.project-link {
+    background: #334155;
+}
+
+.footer {
+    border-top: 1px solid rgba(148, 163, 184, 0.2);
+    background: transparent;
+}
+
+.bg-clear-day { background: linear-gradient(155deg, #1e3a8a, #0f172a); }
+.bg-clear-night { background: linear-gradient(155deg, #0b1120, #111827); }
+.bg-cloudy { background: linear-gradient(155deg, #334155, #1e293b); }
+.bg-rain { background: linear-gradient(155deg, #1e3a5f, #0f172a); }
+.bg-storm { background: linear-gradient(155deg, #111827, #020617); }
+.bg-mist { background: linear-gradient(155deg, #374151, #1f2937); }
+
+@media (max-width: 900px) {
+    .weather-forecast {
+        grid-template-columns: repeat(2, minmax(120px, 1fr));
+    }
+}
+
+/* ============================
+   Weather Ambient Upgrade
+   ============================ */
+
+html,
+body {
+    min-height: 100%;
+}
+
+body {
+    position: relative;
+    transition: background 900ms ease, color 350ms ease;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: -2;
+    opacity: 0;
+    transition: opacity 700ms ease;
+    background: radial-gradient(circle at 20% 10%, rgba(255, 255, 255, 0.15), transparent 45%),
+                radial-gradient(circle at 80% 85%, rgba(255, 255, 255, 0.08), transparent 40%);
+}
+
+body.weather-ready::before {
+    opacity: 1;
+}
+
+body.bg-clear-day {
+    background: linear-gradient(155deg, #3b82f6 0%, #1d4ed8 45%, #0f172a 100%) !important;
+}
+
+body.bg-clear-night {
+    background: linear-gradient(160deg, #020617 0%, #0b1120 40%, #172554 100%) !important;
+}
+
+body.bg-cloudy {
+    background: linear-gradient(160deg, #334155 0%, #475569 40%, #1e293b 100%) !important;
+}
+
+body.bg-rain {
+    background: linear-gradient(160deg, #1f3b57 0%, #334155 35%, #0f172a 100%) !important;
+}
+
+body.bg-storm {
+    background: linear-gradient(160deg, #020617 0%, #111827 45%, #1f2937 100%) !important;
+}
+
+body.bg-mist {
+    background: linear-gradient(160deg, #4b5563 0%, #374151 40%, #1f2937 100%) !important;
+}
+
+.hero-professional {
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-professional::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: linear-gradient(180deg, rgba(2, 6, 23, 0.36), rgba(2, 6, 23, 0.66));
+}
+
+.hero-content-centered {
+    grid-template-columns: 1fr;
+    max-width: 980px;
+}
+
+.weather-wrap {
+    margin-top: 1.25rem;
+}
+
+.weather-glass {
+    background: rgba(15, 23, 42, 0.34);
+    border: 1px solid rgba(226, 232, 240, 0.15);
+    backdrop-filter: blur(14px);
+    border-radius: 20px;
+    box-shadow: 0 10px 35px rgba(2, 6, 23, 0.28);
+    transform: translateY(8px);
+    animation: weatherFloatIn 550ms ease forwards;
+}
+
+@keyframes weatherFloatIn {
+    from { opacity: 0; transform: translateY(18px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.weather-date {
+    font-size: 0.82rem;
+    opacity: 0.78;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    margin-bottom: 0.2rem;
+}
+
+.weather-city {
+    font-size: 1.05rem;
+    font-weight: 600;
+    margin-bottom: 0.35rem;
+}
+
+.weather-current h3 {
+    font-size: clamp(2rem, 4vw, 2.6rem);
+    font-weight: 650;
+}
+
+.weather-state {
+    opacity: 0.8;
+    font-size: 0.85rem;
+}
+
+.forecast-day {
+    background: rgba(15, 23, 42, 0.42);
+    transition: transform 250ms ease, background 250ms ease;
+}
+
+.forecast-day:hover {
+    transform: translateY(-2px);
+    background: rgba(30, 41, 59, 0.58);
+}
+
+@media (max-width: 900px) {
+    .hero-content-centered {
+        max-width: 100%;
+    }
+
+    .weather-wrap {
+        margin-top: 0.8rem;
+    }
+}
+
+/* ============================
+   Refinement Phase Polish
+   ============================ */
+
+body {
+    transition: background 0.8s ease-in-out, color 0.35s ease;
+}
+
+.hero {
+    position: relative;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at top left, rgba(255,255,255,0.05), transparent 60%);
+    pointer-events: none;
+    z-index: 0;
+}
+
+.hero > * {
+    position: relative;
+    z-index: 1;
+}
+
+/* Stronger weather theme depth */
+body.bg-clear-day {
+    background: linear-gradient(155deg, #4f8ef7 0%, #2f68d9 40%, #10223d 100%) !important;
+}
+
+body.bg-clear-night {
+    background: linear-gradient(160deg, #010714 0%, #0a1834 45%, #162a4d 100%) !important;
+}
+
+body.bg-cloudy {
+    background: linear-gradient(160deg, #425569 0%, #4f6276 40%, #263649 100%) !important;
+}
+
+body.bg-rain {
+    background: linear-gradient(160deg, #1b3a4f 0%, #2d4a62 38%, #101f33 100%) !important;
+}
+
+body.bg-storm {
+    background: linear-gradient(160deg, #040812 0%, #0b1424 42%, #202b3a 100%) !important;
+}
+
+body.bg-mist {
+    background: linear-gradient(160deg, #556270 0%, #4b5966 38%, #2d3b49 100%) !important;
+}
+
+.hero-title {
+    font-weight: 800;
+    margin-bottom: 0.75rem;
+}
+
+.hero-subtitle {
+    font-weight: 500;
+    letter-spacing: 1px;
+    margin-bottom: 1.35rem;
+}
+
+.hero-description {
+    margin-top: 0.85rem;
+}
+
+/* Weather blend */
+.weather-card {
+    backdrop-filter: blur(18px);
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.06);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.25), 0 0 26px rgba(148, 163, 184, 0.10);
+    opacity: 0.93;
+    transition: transform 0.3s ease, background 0.3s ease, border-color 0.3s ease;
+}
+
+.weather-card:hover {
+    transform: translateY(-3px);
+    border-color: rgba(255,255,255,0.12);
+}
+
+.weather-date {
+    font-size: 0.85rem;
+    opacity: 0.7;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+/* More whitespace + rhythmic section depth */
+.capabilities,
+.about,
+.skills,
+.experience,
+.projects,
+.contact {
+    padding-top: clamp(4rem, 5.2vw, 5.2rem);
+    padding-bottom: clamp(4rem, 5.2vw, 5.2rem);
+}
+
+.capabilities {
+    background: rgba(17, 24, 39, 0.18);
+}
+
+.about {
+    background: rgba(8, 14, 28, 0.26);
+}
+
+.skills {
+    background: rgba(18, 29, 49, 0.22);
+}
+
+.experience {
+    background: rgba(14, 22, 38, 0.26);
+}
+
+.projects {
+    background: rgba(4, 10, 22, 0.34);
+}
+
+.contact {
+    background: linear-gradient(180deg, rgba(7, 12, 24, 0.36), rgba(10, 18, 33, 0.50));
+}
+
+.about-text,
+.about-text p {
+    color: rgba(226, 232, 240, 0.82);
+}
+
+/* Timeline visibility */
+.experience-timeline::before {
+    width: 3px;
+    background: linear-gradient(180deg, rgba(96, 165, 250, 0.9), rgba(147, 197, 253, 0.75));
+    box-shadow: 0 0 10px rgba(0, 150, 255, 0.4);
+}
+
+.capability-card {
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 6px 16px rgba(2, 6, 23, 0.18);
+}
+
+.capability-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(148, 163, 184, 0.45);
+    box-shadow: 0 10px 24px rgba(2, 6, 23, 0.26);
+}
+
+/* Optional minimal reveal animation */
+.reveal-section {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+body.reveal-enabled .reveal-section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+body.reveal-enabled .reveal-section.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.about-stats .stat h3 {
+    font-size: 2rem;
+    opacity: 0.9;
+}
+
+.about-stats .stat p {
+    font-size: 0.9rem;
+    opacity: 0.85;
+}
+
+/* ============================
+   Weather Scene Engine
+   ============================ */
+
+.global-weather-bg {
+    position: fixed;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: blur(42px);
+    transform: scale(1.12);
+    z-index: -3;
+    opacity: 1;
+    transition: opacity 500ms ease;
+}
+
+.global-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(8, 16, 28, 0.62);
+    z-index: -2;
+}
+
+.hero {
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-weather-bg {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 0;
+    opacity: 1;
+    transition: opacity 450ms ease;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 15% 20%, rgba(255,255,255,0.06), transparent 55%), rgba(0,0,0,0.52);
+    z-index: 1;
+}
+
+.hero .container,
+.hero .content,
+.hero-content,
+.weather-card {
+    position: relative;
+    z-index: 2;
+}
+
+.forecast-day {
+    cursor: pointer;
+    transition: transform 200ms ease, background 200ms ease, border-color 200ms ease;
+}
+
+.forecast-day:hover {
+    transform: translateY(-2px);
+}
+
+.forecast-day.is-active {
+    border-color: rgba(120,180,255,0.45);
+    background: rgba(255,255,255,0.06);
+}
+
+@media (max-width: 768px) {
+    .global-weather-bg {
+        filter: blur(26px);
+        transform: scale(1.06);
+    }
+}
