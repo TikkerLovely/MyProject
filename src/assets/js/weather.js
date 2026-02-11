@@ -44,6 +44,7 @@
         const classes = ['bg-clear-day', 'bg-clear-night', 'bg-cloudy', 'bg-rain', 'bg-storm', 'bg-mist'];
         document.body.classList.remove(...classes);
         document.body.classList.add(className);
+        document.body.classList.add('weather-ready');
     }
 
     function renderForecast(days) {
@@ -116,6 +117,7 @@
     function getLocation() {
         return new Promise((resolve) => {
             if (!navigator.geolocation) {
+                stateEl.textContent = 'Location unavailable. Using Bangkok.';
                 resolve(FALLBACK);
                 return;
             }
@@ -128,7 +130,7 @@
                         city: 'Your location'
                     });
                 },
-                () => resolve(FALLBACK),
+                () => { stateEl.textContent = 'Location denied. Using Bangkok.'; resolve(FALLBACK); },
                 { timeout: 5000 }
             );
         });
