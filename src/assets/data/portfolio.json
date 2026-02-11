@@ -2,8 +2,8 @@
   "personal": {
     "name": "Chayangkul Somruk",
     "logo": "CS",
-    "title": "Senior Data Center Engineer • ETL & Dashboard Builder",
-    "description": "24/7 mission-critical data center operations specialist. Experienced in infrastructure stability, SLA compliance, monitoring, and incident response. Passionate about transforming operational telemetry into clear, decision-ready ETL dashboards.",
+    "title": "Cloud & Infrastructure Engineer",
+    "description": "Specialized in 24/7 critical systems, infrastructure automation, and ETL data pipelines for mission-critical environments.",
     "email": "chayangkul.somruk@gmail.com",
     "phone": "+66962980316",
     "location": "Bangkok, Thailand (Open to relocating internationally)",
@@ -14,63 +14,63 @@
   "about": {
     "title": "About Me",
     "paragraphs": [
-      "Senior Data Center Engineer with expertise in 24/7 mission-critical operations, infrastructure monitoring, and SLA compliance. Based in Bangkok, Thailand, with proven track record in optimizing data center performance, reducing MTTR, and managing complex network/infrastructure environments.",
-      "Specialized in proactive monitoring, incident response, and operational excellence. Experience includes NOC/DCC operations, real-time monitoring systems, infrastructure management, and cross-team coordination. Committed to continuous improvement and leveraging automation to enhance operational efficiency."
+      "Cloud & Infrastructure Engineer with 2+ years in mission-critical Data Center and NOC operations. Experienced in maintaining high-availability platforms, monitoring complex infrastructure, and executing fast incident response under SLA constraints.",
+      "Focused on automation-first operations: transforming telemetry into actionable dashboards, improving MTTR, and driving operational reliability across production environments."
     ],
     "stats": [
       {
         "number": "2+",
-        "label": "Years in Current Role"
+        "label": "Years Experience"
       },
       {
-        "number": "24/7",
-        "label": "Mission-Critical Ops"
+        "number": "99.99%",
+        "label": "SLA Target Operations"
       },
       {
-        "number": "20-30%",
-        "label": "Uptime Improvement"
+        "number": "30%",
+        "label": "MTTR Reduction"
       }
     ]
   },
   "skills": [
     {
-      "icon": "💻",
-      "title": "Programming Languages",
+      "icon": "🛡️",
+      "title": "Core Expertise",
       "items": [
-        "Python, SQL, C++, C, Java",
-        "Scripting & Automation",
-        "System-level Programming",
-        "Network Protocols"
+        "Data Center Operations",
+        "Incident Management & Escalation",
+        "SLA Handling & Service Continuity",
+        "Infrastructure Monitoring (NOC/DCC)"
+      ]
+    },
+    {
+      "icon": "☁️",
+      "title": "Cloud & Platform",
+      "items": [
+        "AWS (EC2, S3, IAM)",
+        "Linux Administration",
+        "Container Fundamentals (Docker)",
+        "Git-based Delivery Workflow"
+      ]
+    },
+    {
+      "icon": "🧠",
+      "title": "Automation & Data",
+      "items": [
+        "Python & SQL Automation",
+        "ETL Pipeline Fundamentals",
+        "Power BI / Dashboard Analytics",
+        "Operational Reporting & KPI Tracking"
       ]
     },
     {
       "icon": "🔧",
-      "title": "Operations & Infrastructure",
+      "title": "Tooling",
       "items": [
-        "Linux, Network Monitoring",
         "Nagios, Zabbix, PRTG, Cacti",
-        "Hardware Automation",
-        "Incident Response, SOP Operations"
-      ]
-    },
-    {
-      "icon": "📊",
-      "title": "Data & Visualization",
-      "items": [
-        "Excel, Power BI",
-        "Data Analysis & Reporting",
-        "Analytics Dashboards",
-        "Performance Metrics"
-      ]
-    },
-    {
-      "icon": "🖥️",
-      "title": "Data Center Expertise",
-      "items": [
-        "Server & GPU Troubleshooting",
-        "OOB/BMC Tools",
-        "Hardware & Cabling",
-        "Access Control Systems"
+        "System & Log Troubleshooting",
+        "SOP-based Operations",
+        "Cross-team Incident Coordination"
       ]
     }
   ],
@@ -80,10 +80,10 @@
       "company": "Tech Hub Solutions (Bangkok, TH)",
       "date": "July 2025 - Present",
       "achievements": [
-        "Led 24/7 mission-critical data center operations, ensuring high availability and SLA compliance",
-        "Improved infrastructure stability and SLA compliance through proactive monitoring and root cause analysis",
-        "Optimized monitoring workflows, reducing MTTR by 30-40% compared to manual processes",
-        "Automated operational reporting using Excel and Power BI, improving efficiency by 50-60%"
+        "Handled 24/7 mission-critical infrastructure operations across production environments.",
+        "Maintained service performance aligned with 99.99% availability and strict SLA requirements.",
+        "Reduced incident resolution time (MTTR) by 30-40% through proactive monitoring and triage flow improvements.",
+        "Automated operational reporting workflows, cutting manual reporting effort by 50-60%."
       ]
     },
     {
@@ -91,10 +91,10 @@
       "company": "TCC Technology – One Bangkok Project",
       "date": "July 2023 - July 2025",
       "achievements": [
-        "Supported 24/7 network and infrastructure monitoring, ensuring service continuity through real-time monitoring and incident triage",
-        "Improved NOC operational efficiency through proactive monitoring of network, BMS, EMS, CCTV, and access systems",
-        "Performed rapid incident triage and first-level troubleshooting, reducing MTTE and supporting escalation",
-        "Analyzed system logs to identify recurring fault patterns and support root cause analysis"
+        "Monitored multi-system infrastructure (Network, BMS, EMS, CCTV, Access Control) in 24/7 operations.",
+        "Executed first-response incident triage with escalation discipline to minimize service impact.",
+        "Analyzed recurring faults and collaborated in root-cause elimination initiatives.",
+        "Improved operational visibility using structured dashboards and recurring KPI reports."
       ]
     }
   ],
@@ -115,7 +115,10 @@
           "url": "https://open-meteo.com/",
           "external": true
         }
-      ]
+      ],
+      "problem": "Operational telemetry was scattered and difficult for stakeholders to interpret quickly.",
+      "solution": "Built a browser ETL flow to extract Open-Meteo data, transform 24-hour KPIs, and load visual components in real time.",
+      "result": "Enabled a clear decision-ready dashboard demo with live API integration for portfolio and interview discussions."
     },
     {
       "emoji": "📊",
@@ -128,7 +131,10 @@
           "url": "https://github.com/TikkerLovely",
           "external": true
         }
-      ]
+      ],
+      "problem": "Managers lacked a unified incident view across time, severity, and category.",
+      "solution": "Designed Power BI views and summary slices for daily monitoring and weekly operational reviews.",
+      "result": "Improved reporting clarity and reduced preparation time for management reviews."
     },
     {
       "emoji": "⚙️",
@@ -141,7 +147,10 @@
           "url": "https://github.com/TikkerLovely",
           "external": true
         }
-      ]
+      ],
+      "problem": "Monitoring and escalation steps were manual and inconsistent across shifts.",
+      "solution": "Integrated tool-based alerting and standardized escalation/reporting workflows.",
+      "result": "Lowered manual effort while improving response consistency and service continuity."
     },
     {
       "emoji": "🔧",
@@ -154,7 +163,10 @@
           "url": "https://github.com/TikkerLovely",
           "external": true
         }
-      ]
+      ],
+      "problem": "Incident actions were inconsistent across teams during high-pressure events.",
+      "solution": "Defined SOP-driven incident paths and handoff checkpoints for each escalation stage.",
+      "result": "Faster coordination and fewer repeated incidents through structured response practices."
     }
   ],
   "education": [

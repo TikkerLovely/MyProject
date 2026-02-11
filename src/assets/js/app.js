@@ -128,6 +128,12 @@
                     )
                     .join('');
 
+                const detailBlocks = [
+                    project.problem ? `<p class="project-detail"><strong>Problem:</strong> ${project.problem}</p>` : '',
+                    project.solution ? `<p class="project-detail"><strong>Solution:</strong> ${project.solution}</p>` : '',
+                    project.result ? `<p class="project-detail"><strong>Result:</strong> ${project.result}</p>` : ''
+                ].join('');
+
                 return `
                     <div class="project-card">
                         <div class="project-image">
@@ -137,6 +143,7 @@
                             <h3>${project.title || ''}</h3>
                             <p class="tech-stack">${project.tech || ''}</p>
                             <p class="project-description">${project.description || ''}</p>
+                            ${detailBlocks}
                             <div class="project-links">${links || ''}</div>
                         </div>
                     </div>
@@ -177,6 +184,11 @@
         const footerText = query('.footer-content p:first-child');
         if (footerText && personal.name) {
             footerText.textContent = `© 2024-2026 ${personal.name}. All rights reserved.`;
+        }
+
+        const footerLocation = query('.footer-contact-grid span');
+        if (footerLocation && personal.location) {
+            footerLocation.textContent = personal.location;
         }
     }
 

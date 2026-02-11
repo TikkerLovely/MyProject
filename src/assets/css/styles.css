@@ -1517,3 +1517,179 @@ body.dark-mode .etl-panel {
         grid-template-columns: 1fr;
     }
 }
+
+/* ============================
+   Professional Polish Overrides
+   ============================ */
+
+:root {
+    --section-padding: 5rem;
+}
+
+body {
+    font-size: 16px;
+    line-height: 1.75;
+}
+
+.hero,
+.about,
+.education,
+.skills,
+.experience,
+.projects,
+.etl-dashboard,
+.contact {
+    padding: var(--section-padding) 0;
+}
+
+.hero-subtitle {
+    font-size: 1.9rem;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+}
+
+.hero-description,
+.about-text,
+.achievements li,
+.project-description,
+.project-detail,
+.contact-item,
+.etl-table th,
+.etl-table td {
+    font-size: 1rem;
+}
+
+.profile-card {
+    width: min(360px, 100%);
+    min-height: 300px;
+    border-radius: 16px;
+    padding: var(--spacing-xl);
+    background: #ffffff;
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow-md);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: var(--spacing-md);
+}
+
+.profile-avatar {
+    width: 88px;
+    height: 88px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    font-size: 2rem;
+    font-weight: 800;
+    color: #fff;
+    background: #0e7fbf;
+}
+
+.profile-role {
+    color: var(--text);
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.profile-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem;
+}
+
+.profile-meta span {
+    background: var(--light);
+    border: 1px solid var(--border);
+    color: var(--text-light);
+    border-radius: 999px;
+    padding: .35rem .65rem;
+    font-size: .82rem;
+    font-weight: 600;
+}
+
+.projects-grid {
+    gap: var(--spacing-lg);
+}
+
+.project-card {
+    background: #ffffff;
+    border: 1px solid var(--border);
+}
+
+.project-detail {
+    color: var(--text-light);
+    margin-bottom: .5rem;
+}
+
+.project-detail strong {
+    color: var(--text);
+}
+
+.etl-dashboard {
+    background: var(--light);
+}
+
+.etl-step,
+.etl-kpi-card,
+.etl-panel {
+    padding: var(--spacing-lg);
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow-sm);
+}
+
+.etl-flow,
+.etl-kpi-grid,
+.etl-visuals {
+    gap: var(--spacing-lg);
+}
+
+.etl-table th {
+    color: var(--text);
+    font-weight: 700;
+    background: rgba(0,0,0,0.02);
+}
+
+.footer {
+    background: #0f1419;
+}
+
+.footer-contact-grid {
+    margin-top: var(--spacing-md);
+    display: grid;
+    grid-template-columns: repeat(2, minmax(220px, 1fr));
+    gap: .5rem 1rem;
+    text-align: left;
+}
+
+.footer-contact-grid a,
+.footer-contact-grid span {
+    color: #cbd5e0;
+    text-decoration: none;
+    font-size: .95rem;
+}
+
+.footer-contact-grid a:hover {
+    color: #ffffff;
+}
+
+body.dark-mode .profile-card,
+body.dark-mode .project-card,
+body.dark-mode .etl-step,
+body.dark-mode .etl-kpi-card,
+body.dark-mode .etl-panel {
+    background: #1a2332;
+}
+
+@media (max-width: 768px) {
+    :root { --section-padding: 4rem; }
+
+    .hero-subtitle {
+        font-size: 1.4rem;
+    }
+
+    .footer-contact-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+}
