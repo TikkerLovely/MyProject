@@ -1,355 +1,368 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="th">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chayangkul Somruk - Senior Data Center Engineer Portfolio</title>
-    <meta name="description" content="Senior Data Center Engineer with 2+ years of experience in 24/7 mission-critical operations, infrastructure monitoring, and SLA compliance. Bangkok, Thailand.">
-    <meta name="keywords" content="Data Center Engineer, Infrastructure, Monitoring, NOC, DCC, Bangkok">
-    <meta name="author" content="Chayangkul Somruk">
-    <meta name="theme-color" content="#0066cc">
-    <meta property="og:title" content="Chayangkul Somruk - Senior Data Center Engineer">
-    <meta property="og:description" content="Explore my portfolio showcasing data center operations, infrastructure automation, and incident response expertise.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://resume-chayangkul.netlify.app">
-    <link rel="canonical" href="https://resume-chayangkul.netlify.app">
-    <link rel="stylesheet" href="assets/css/styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Offline Jump Game</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #0f1115;
+      --panel: #161a22;
+      --text: #f4f7ff;
+      --accent: #8bc5ff;
+      --danger: #ff6b6b;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: "Segoe UI", Tahoma, sans-serif;
+      background: radial-gradient(circle at top, #1f2a3b, var(--bg) 45%);
+      color: var(--text);
+      display: grid;
+      place-items: center;
+      padding: 16px;
+    }
+
+    .game-shell {
+      width: min(920px, 100%);
+      background: rgba(22, 26, 34, 0.9);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 16px;
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.35);
+      padding: 16px;
+    }
+
+    .top-bar {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 12px;
+      align-items: center;
+    }
+
+    .score {
+      font-weight: 600;
+      font-size: 1rem;
+      letter-spacing: 0.04em;
+    }
+
+    .controls {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    button {
+      cursor: pointer;
+      border: none;
+      border-radius: 10px;
+      padding: 10px 14px;
+      background: var(--accent);
+      color: #031225;
+      font-weight: 600;
+      transition: transform 120ms ease, filter 120ms ease;
+    }
+
+    button:hover { filter: brightness(1.08); }
+    button:active { transform: translateY(1px) scale(0.99); }
+
+    .hint {
+      margin-top: 10px;
+      color: rgba(244, 247, 255, 0.85);
+      font-size: 0.92rem;
+      line-height: 1.4;
+    }
+
+    .canvas-wrap {
+      position: relative;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      background: linear-gradient(#111827, #0d1320);
+    }
+
+    canvas {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    .overlay {
+      position: absolute;
+      inset: 0;
+      display: grid;
+      place-items: center;
+      text-align: center;
+      pointer-events: none;
+      background: rgba(0, 0, 0, 0.22);
+      opacity: 0;
+      transition: opacity 180ms ease;
+    }
+
+    .overlay.show { opacity: 1; }
+
+    .overlay h1 {
+      margin: 0;
+      font-size: clamp(1.1rem, 4vw, 2rem);
+    }
+
+    .overlay p {
+      margin: 8px 0 0;
+      color: #d5e8ff;
+    }
+
+    .danger { color: var(--danger); }
+
+    @media (max-width: 600px) {
+      .game-shell { padding: 12px; }
+      button { width: 100%; }
+      .controls { width: 100%; }
+    }
+  </style>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <a href="#home" class="logo">CS</a>
-            <button id="hamburger-menu" class="hamburger-menu" title="Menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            <ul class="nav-menu">
-                <li><a href="#home" class="nav-link">Home</a></li>
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#skills" class="nav-link">Skills</a></li>
-                <li><a href="#experience" class="nav-link">Experience</a></li>
-                <li><a href="#projects" class="nav-link">Projects</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
-                <li><button id="dark-mode-toggle" class="dark-mode-btn" title="Toggle Dark Mode">🌙</button></li>
-            </ul>
+  <main class="game-shell">
+    <div class="top-bar">
+      <div>
+        <div class="score" id="scoreLabel">SCORE: 00000 | BEST: 00000</div>
+      </div>
+      <div class="controls">
+        <button id="startBtn">เริ่ม / รีสตาร์ท</button>
+        <button id="jumpBtn">กระโดด</button>
+      </div>
+    </div>
+
+    <div class="canvas-wrap">
+      <canvas id="game" width="880" height="260" aria-label="Offline Jump Game" role="img"></canvas>
+      <div class="overlay show" id="overlay">
+        <div>
+          <h1>🦖 Offline Jump Game</h1>
+          <p>กด <strong>Space</strong> / <strong>↑</strong> หรือปุ่ม <strong>กระโดด</strong> เพื่อเล่น</p>
         </div>
-    </nav>
+      </div>
+    </div>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <div class="hero-text">
-                <h1 class="hero-title">Hi, I'm <span class="highlight">Chayangkul Somruk</span></h1>
-                <p class="hero-subtitle">Senior Data Center Engineer</p>
-                <p class="hero-description">
-                    24/7 mission-critical data center operations specialist. Experienced in infrastructure stability, SLA compliance, monitoring, and incident response. Passionate about operational excellence and system reliability.
-                </p>
-                <div class="hero-buttons">
-                    <a href="#contact" class="btn btn-primary">Get in Touch</a>
-                    <a href="#projects" class="btn btn-secondary">View My Work</a>
-                    <a href="assets/documents/Chayangkul_Somruk_CV.pdf" download class="btn btn-tertiary">Download CV</a>
-                </div>
-                <div class="social-links">
-                    <a href="https://linkedin.com/in/chayangkul-somruk-50b476312" target="_blank" class="social-icon">LinkedIn</a>
-                    <a href="https://github.com/TikkerLovely" target="_blank" class="social-icon">GitHub</a>
-                </div>
-            </div>
-            <div class="hero-image">
-            <div class="avatar-placeholder">
-                <img
-                src="assets/images/chayangkul.png"
-                alt="Chayangkul Somruk profile photo"
-                class="avatar-img">
-            </div>
+    <p class="hint">
+      เกมเล่นแบบออฟไลน์ได้ทันที: เปิดไฟล์นี้แล้วเล่นได้เลย (ไม่ต้องใช้อินเทอร์เน็ต) • บนมือถือแตะปุ่ม <strong>กระโดด</strong>
+    </p>
+  </main>
 
-        </div>
-    </section>
-    
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>
-                        Senior Data Center Engineer with expertise in 24/7 mission-critical operations, infrastructure monitoring, and SLA compliance. 
-                        Based in Bangkok, Thailand, with proven track record in optimizing data center performance, reducing MTTR, and managing complex network/infrastructure environments.
-                    </p>
-                    <p>
-                        Specialized in proactive monitoring, incident response, and operational excellence. Experience includes NOC/DCC operations, 
-                        real-time monitoring systems, infrastructure management, and cross-team coordination. Committed to continuous improvement 
-                        and leveraging automation to enhance operational efficiency.
-                    </p>
-                    <div class="about-stats">
-                        <div class="stat">
-                            <h3>2+</h3>
-                            <p>Years in Current Role</p>
-                        </div>
-                        <div class="stat">
-                            <h3>24/7</h3>
-                            <p>Mission-Critical Ops</p>
-                        </div>
-                        <div class="stat">
-                            <h3>20-30%</h3>
-                            <p>Uptime Improvement</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+  <script>
+    const canvas = document.getElementById('game');
+    const ctx = canvas.getContext('2d');
+    const scoreLabel = document.getElementById('scoreLabel');
+    const overlay = document.getElementById('overlay');
+    const startBtn = document.getElementById('startBtn');
+    const jumpBtn = document.getElementById('jumpBtn');
 
-    <!-- Education Section -->
-    <section id="education" class="education">
-        <div class="container">
-            <h2 class="section-title">Education</h2>
-            <div class="education-timeline" id="education-timeline">
-            <!-- JS จะมาใส่ตรงนี้ -->
-            </div>
-        </div>
-        </section>
+    const groundY = 210;
+    const gravity = 0.78;
+    const jumpForce = -13.5;
 
+    let best = Number(localStorage.getItem('offline-jump-best') || 0);
+    let state;
 
-    <!-- Skills Section -->
-    <section id="skills" class="skills">
-        <div class="container">
-            <h2 class="section-title">Skills & Expertise</h2>
-            <div class="skills-grid">
-                <div class="skill-card">
-                    <div class="skill-icon">💻</div>
-                    <h3>Programming Languages</h3>
-                    <ul>
-                        <li>Python, SQL, C++, C, Java</li>
-                        <li>Scripting & Automation</li>
-                        <li>System-level Programming</li>
-                        <li>Network Protocols</li>
-                    </ul>
-                </div>
+    function reset() {
+      state = {
+        running: true,
+        gameOver: false,
+        distance: 0,
+        speed: 6,
+        spawnTimer: 0,
+        player: { x: 80, y: groundY, w: 34, h: 42, vy: 0, onGround: true },
+        obstacles: [],
+        clouds: Array.from({ length: 4 }, (_, i) => ({
+          x: 120 + i * 240,
+          y: 20 + Math.random() * 60,
+          s: 0.5 + Math.random() * 0.8
+        }))
+      };
+      overlay.classList.remove('show');
+      overlay.innerHTML = '';
+    }
 
-                <div class="skill-card">
-                    <div class="skill-icon">🔧</div>
-                    <h3>Operations & Infrastructure</h3>
-                    <ul>
-                        <li>Linux, Network Monitoring</li>
-                        <li>Nagios, Zabbix, PRTG, Cacti</li>
-                        <li>Hardware Automation</li>
-                        <li>Incident Response, SOP Operations</li>
-                    </ul>
-                </div>
+    function jump() {
+      if (!state.running) {
+        reset();
+      }
+      if (state.player.onGround) {
+        state.player.vy = jumpForce;
+        state.player.onGround = false;
+      }
+    }
 
-                <div class="skill-card">
-                    <div class="skill-icon">📊</div>
-                    <h3>Data & Visualization</h3>
-                    <ul>
-                        <li>Excel, Power BI</li>
-                        <li>Data Analysis & Reporting</li>
-                        <li>Analytics Dashboards</li>
-                        <li>Performance Metrics</li>
-                    </ul>
-                </div>
+    function spawnObstacle() {
+      const tall = Math.random() > 0.5;
+      state.obstacles.push({
+        x: canvas.width + 20,
+        y: groundY,
+        w: tall ? 22 : 30,
+        h: tall ? 54 : 36,
+      });
+    }
 
-                <div class="skill-card">
-                    <div class="skill-icon">🖥️</div>
-                    <h3>Data Center Expertise</h3>
-                    <ul>
-                        <li>Server & GPU Troubleshooting</li>
-                        <li>OOB/BMC Tools</li>
-                        <li>Hardware & Cabling</li>
-                        <li>Access Control Systems</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
+    function collide(a, b) {
+      return (
+        a.x < b.x + b.w &&
+        a.x + a.w > b.x &&
+        a.y < b.y + b.h &&
+        a.y + a.h > b.y
+      );
+    }
 
-    <!-- Experience Section -->
-    <section id="experience" class="experience">
-        <div class="container">
-            <h2 class="section-title">Professional Experience</h2>
-            <div class="experience-timeline">
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <h3>Senior Data Center Engineer</h3>
-                        <p class="company">Tech Hub Solutions (Bangkok, TH)</p>
-                        <p class="date">July 2025 - Present</p>
-                        <ul class="achievements">
-                            <li>Led 24/7 mission-critical data center operations, ensuring high availability and SLA compliance</li>
-                            <li>Improved infrastructure stability and SLA compliance through proactive monitoring and root cause analysis</li>
-                            <li>Optimized monitoring workflows, reducing MTTR by 30-40% compared to manual processes</li>
-                            <li>Automated operational reporting using Excel and Power BI, improving efficiency by 50-60%</li>
-                        </ul>
-                    </div>
-                </div>
+    function update() {
+      if (!state.running) return;
 
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <h3>DCC & NOC Engineer</h3>
-                        <p class="company">TCC Technology – One Bangkok Project</p>
-                        <p class="date">July 2023 - July 2025</p>
-                        <ul class="achievements">
-                            <li>Supported 24/7 network and infrastructure monitoring, ensuring service continuity through real-time monitoring and incident triage</li>
-                            <li>Improved NOC operational efficiency through proactive monitoring of network, BMS, EMS, CCTV, and access systems</li>
-                            <li>Performed rapid incident triage and first-level troubleshooting, reducing MTTE and supporting escalation</li>
-                            <li>Analyzed system logs to identify recurring fault patterns and support root cause analysis</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+      state.distance += 0.12;
+      state.speed += 0.0014;
 
-    <!-- Projects Section -->
-    <section id="projects" class="projects">
-        <div class="container">
-            <h2 class="section-title">Featured Projects</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-image">
-                        <div class="project-placeholder">📊</div>
-                    </div>
-                    <div class="project-content">
-                        <h3>Portfolio & Resume Website</h3>
-                        <p class="tech-stack">HTML • CSS • JavaScript • Responsive Design</p>
-                        <p class="project-description">
-                            Built a modern, responsive portfolio website with dark mode support, contact forms, and mobile-first design. Hosted on Netlify with automatic deployments from GitHub.
-                        </p>
-                        <div class="project-links">
-                            <a href="https://github.com/TikkerLovely/MyProject" target="_blank" class="project-link">View Code</a>
-                            <a href="https://resume-chayangkul.netlify.app" target="_blank" class="project-link">Live Demo</a>
-                        </div>
-                    </div>
-                </div>
+      const p = state.player;
+      p.vy += gravity;
+      p.y += p.vy;
 
-                <div class="project-card">
-                    <div class="project-image">
-                        <div class="project-placeholder">⚙️</div>
-                    </div>
-                    <div class="project-content">
-                        <h3>Infrastructure Monitoring Automation</h3>
-                        <p class="tech-stack">Nagios • Zabbix • PRTG • Python • Excel</p>
-                        <p class="project-description">
-                            Implemented comprehensive monitoring infrastructure for 24/7 operations. Automated incident detection, escalation workflows, and operational reporting using enterprise monitoring tools. Reduced MTTR by 30-40%.
-                        </p>
-                        <div class="project-links">
-                            <a href="https://github.com/TikkerLovely" target="_blank" class="project-link">GitHub</a>
-                        </div>
-                    </div>
+      if (p.y >= groundY) {
+        p.y = groundY;
+        p.vy = 0;
+        p.onGround = true;
+      }
 
-                </div>
+      state.spawnTimer -= 1;
+      if (state.spawnTimer <= 0) {
+        spawnObstacle();
+        state.spawnTimer = 55 + Math.random() * 80 - Math.min(25, state.distance * 0.12);
+      }
 
-                <div class="project-card">
-                    <div class="project-image">
-                        <div class="project-placeholder">🔧</div>
-                    </div>
-                    <div class="project-content">
-                        <h3>Operational Incident & NOC Analytics Dashboard</h3>
-                        <p class="tech-stack">Power BI • Excel • Python • Real-time Data</p>
-                        <p class="project-description">
-                            Developed Power BI dashboards for NOC operations. Enabled management reviews with real-time incident analysis by date, category, and priority. Improved reporting efficiency by 50-60%.
-                        </p>
-                        <div class="project-links">
-                            <a href="https://github.com/TikkerLovely" target="_blank" class="project-link">GitHub</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+      for (const c of state.clouds) {
+        c.x -= c.s;
+        if (c.x < -60) {
+          c.x = canvas.width + Math.random() * 100;
+          c.y = 20 + Math.random() * 70;
+        }
+      }
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2 class="section-title">Get In Touch</h2>
-            <p class="section-subtitle">Let's collaborate and build something amazing together</p>
-            
-            <div class="contact-wrapper">
-                <div class="contact-info">
-                    <h3>Contact Information</h3>
-                    <div class="contact-item">
-                        <span class="contact-icon">📧</span>
-                        <div>
-                            <p class="contact-label">Email</p>
-                            <a href="mailto:chayangkul.somruk@gmail.com">chayangkul.somruk@gmail.com</a>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <span class="contact-icon">📱</span>
-                        <div>
-                            <p class="contact-label">Phone</p>
-                            <a href="tel:+66962980316">+66 96 298 0316</a>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <span class="contact-icon">📍</span>
-                        <div>
-                            <p class="contact-label">Location</p>
-                            <p class="contact-value location">Bangkok, Thailand</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <span class="contact-icon">🔗</span>
-                        <div>
-                            <p class="contact-label">Social Links</p>
-                            <div class="social-buttons">
-                                <a href="https://linkedin.com/in/chayangkul-somruk-50b476312" target="_blank" class="social-btn">LinkedIn</a>
-                                <a href="https://github.com/TikkerLovely" target="_blank" class="social-btn">GitHub</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+      for (const ob of state.obstacles) {
+        ob.x -= state.speed;
+      }
 
-                <form class="contact-form" id="contact-form">
-                    <div class="form-group">
-                        <label for="name">Full Name *</label>
-                        <input type="text" id="name" name="name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email Address *</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="subject">Subject *</label>
-                        <input type="text" id="subject" name="subject" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Message *</label>
-                        <textarea id="message" name="message" rows="5" required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary btn-submit">Send Message</button>
-                    <p class="form-note">I'll get back to you within 24 hours</p>
-                </form>
-            </div>
+      state.obstacles = state.obstacles.filter((ob) => ob.x + ob.w > -10);
 
-            <div class="cta-section">
-                <h3>Ready to Collaborate?</h3>
-                <p>Download my CV or schedule a call to discuss potential opportunities</p>
-                <div class="cta-buttons">
-                    <a href="assets/documents/Chayangkul_Somruk_CV.pdf" download class="btn btn-primary">📄 Download CV</a>
-                    <a href="https://calendly.com/yourprofile/consultation" class="btn btn-secondary" target="_blank">📅 Schedule Call</a>
-                </div>
-            </div>
-        </div>
-    </section>
+      const hitbox = {
+        x: p.x + 5,
+        y: p.y - p.h + 6,
+        w: p.w - 10,
+        h: p.h - 6,
+      };
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <p>&copy; 2024-2025 Chayangkul Somruk. All rights reserved.</p>
-                <p class="footer-stats">
-                    Built with 💻 HTML/CSS/JS • Hosted on Netlify
-                </p>
-            </div>
-        </div>
-        <script src="assets/js/app.js"></script>
-        <script src="assets/js/counter.js"></script>
-        <script src="assets/js/dark-mode.js"></script>
-        <script src="assets/js/contact.js"></script>
-        <script src="assets/js/hamburger.js"></script>
-    </footer>
+      for (const ob of state.obstacles) {
+        const obstacleHitbox = { x: ob.x + 1, y: ob.y - ob.h, w: ob.w - 2, h: ob.h };
+        if (collide(hitbox, obstacleHitbox)) {
+          state.running = false;
+          state.gameOver = true;
+          const score = Math.floor(state.distance);
+          if (score > best) {
+            best = score;
+            localStorage.setItem('offline-jump-best', String(best));
+          }
+          overlay.innerHTML = `
+            <div>
+              <h1 class="danger">Game Over</h1>
+              <p>คะแนน: <strong>${String(score).padStart(5, '0')}</strong></p>
+              <p>กด Space, ↑ หรือปุ่มเริ่มเพื่อเล่นใหม่</p>
+            </div>`;
+          overlay.classList.add('show');
+          break;
+        }
+      }
+
+      const current = Math.floor(state.distance);
+      scoreLabel.textContent = `SCORE: ${String(current).padStart(5, '0')} | BEST: ${String(best).padStart(5, '0')}`;
+    }
+
+    function drawDino(p) {
+      const x = p.x;
+      const y = p.y - p.h;
+      ctx.fillStyle = '#d0e7ff';
+      ctx.fillRect(x + 8, y + 8, 18, 24);
+      ctx.fillRect(x + 22, y, 12, 14);
+      ctx.fillRect(x + 4, y + 12, 8, 10);
+      ctx.fillRect(x + 10, y + 32, 6, 10);
+      ctx.fillRect(x + 20, y + 32, 6, 10);
+      ctx.fillStyle = '#0d1320';
+      ctx.fillRect(x + 28, y + 6, 3, 3);
+    }
+
+    function drawCloud(c) {
+      ctx.fillStyle = 'rgba(220, 235, 255, 0.8)';
+      ctx.beginPath();
+      ctx.arc(c.x, c.y, 12 * c.s, 0, Math.PI * 2);
+      ctx.arc(c.x + 14 * c.s, c.y + 2, 10 * c.s, 0, Math.PI * 2);
+      ctx.arc(c.x - 12 * c.s, c.y + 3, 8 * c.s, 0, Math.PI * 2);
+      ctx.fill();
+    }
+
+    function render() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      const sky = ctx.createLinearGradient(0, 0, 0, canvas.height);
+      sky.addColorStop(0, '#1d293b');
+      sky.addColorStop(1, '#0f1624');
+      ctx.fillStyle = sky;
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+      state.clouds.forEach(drawCloud);
+
+      ctx.strokeStyle = '#9ab8db';
+      ctx.lineWidth = 2;
+      ctx.beginPath();
+      ctx.moveTo(0, groundY + 0.5);
+      ctx.lineTo(canvas.width, groundY + 0.5);
+      ctx.stroke();
+
+      ctx.fillStyle = '#89c166';
+      for (let i = 0; i < canvas.width; i += 20) {
+        const h = 3 + ((i + Math.floor(state.distance * 10)) % 8);
+        ctx.fillRect(i, groundY + 2, 10, h);
+      }
+
+      ctx.fillStyle = '#90ff8f';
+      state.obstacles.forEach((ob) => {
+        const top = ob.y - ob.h;
+        ctx.fillRect(ob.x, top, ob.w, ob.h);
+        ctx.fillRect(ob.x - 2, top + 10, ob.w + 4, 4);
+      });
+
+      drawDino(state.player);
+    }
+
+    function loop() {
+      update();
+      render();
+      requestAnimationFrame(loop);
+    }
+
+    window.addEventListener('keydown', (event) => {
+      if (event.code === 'Space' || event.code === 'ArrowUp') {
+        event.preventDefault();
+        jump();
+      }
+    });
+
+    jumpBtn.addEventListener('click', jump);
+    startBtn.addEventListener('click', () => {
+      reset();
+      jump();
+    });
+    canvas.addEventListener('pointerdown', jump);
+
+    reset();
+    state.running = false;
+    loop();
+    scoreLabel.textContent = `SCORE: 00000 | BEST: ${String(best).padStart(5, '0')}`;
+  </script>
 </body>
 </html>
