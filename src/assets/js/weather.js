@@ -14,6 +14,13 @@
         fallback: "url('assets/weather/cloudy.jpg'), linear-gradient(160deg, #425569 0%, #4f6276 40%, #263649 100%)"
     };
 
+    const SEASON_BG = {
+        spring: "url('assets/weather/seasons/spring.svg'), linear-gradient(160deg, #8fd19e 0%, #d9f2cf 58%, #f7d7e4 100%)",
+        summer: "url('assets/weather/seasons/summer.svg'), linear-gradient(160deg, #3fa5e8 0%, #90d7f8 55%, #ffd889 100%)",
+        autumn: "url('assets/weather/seasons/autumn.svg'), linear-gradient(160deg, #a65f33 0%, #d78d45 52%, #f1c06d 100%)",
+        winter: "url('assets/weather/seasons/winter.svg'), linear-gradient(160deg, #88a6ca 0%, #cfdff0 58%, #edf5ff 100%)"
+    };
+
     const dateEl = document.getElementById('weather-date');
     const cityEl = document.getElementById('weather-city');
     const tempEl = document.getElementById('weather-temp');
@@ -24,6 +31,29 @@
     const globalBgEl = document.getElementById('globalWeatherBg');
 
     if (!dateEl || !cityEl || !tempEl || !conditionEl || !stateEl || !forecastEl || !heroBgEl || !globalBgEl) return;
+
+
+    function seasonFromDate(dateValue, latitude = FALLBACK.latitude) {
+        const date = dateValue ? new Date(dateValue) : new Date();
+        const month = date.getMonth() + 1;
+
+        let season = 'winter';
+        if (month >= 3 && month <= 5) season = 'spring';
+        else if (month >= 6 && month <= 8) season = 'summer';
+        else if (month >= 9 && month <= 11) season = 'autumn';
+
+        return latitude < 0 ? flipHemisphereSeason(season) : season;
+    }
+
+    function flipHemisphereSeason(season) {
+        const map = {
+            spring: 'autumn',
+            summer: 'winter',
+            autumn: 'spring',
+            winter: 'summer'
+        };
+        return map[season] || season;
+    }
 
     function setDateLabel() {
         dateEl.textContent = new Date().toLocaleDateString('en-US', {
@@ -90,11 +120,15 @@
         return map[key] || 'bg-cloudy';
     }
 
-    function applyWeatherSceneForDay(dayData, isNightOverride = null) {
+    function applyWeatherSceneForDay(dayData, isNightOverride = null, latitude = FALLBACK.latitude) {
         const main = weatherLabelFromCode(dayData?.code || -1);
         const isNight = isNightOverride === null ? isNightBySun(dayData) : isNightOverride;
         const key = pickWeatherKey(main, isNight);
-        const bg = WEATHER_BG[key] || WEATHER_BG.fallback;
+        const season = seasonFromDate(dayData?.date, latitude);
+
+        const seasonalKeys = new Set(['clear-day', 'cloudy', 'mist', 'fallback']);
+        const weatherBg = WEATHER_BG[key] || WEATHER_BG.fallback;
+        const bg = seasonalKeys.has(key) ? (SEASON_BG[season] || weatherBg) : weatherBg;
 
         setBackgroundWithFade(heroBgEl, bg);
         setBackgroundWithFade(globalBgEl, bg);
@@ -131,7 +165,7 @@
                 const selected = days[idx] || days[0];
                 tempEl.textContent = `${Math.round((selected.max + selected.min) / 2)}°C`;
                 conditionEl.textContent = weatherLabelFromCode(selected.code);
-                applyWeatherSceneForDay(selected, idx === 0 ? null : false);
+                applyWeatherSceneForDay(selected, idx === 0 ? null : false, selected.latitude || FALLBACK.latitude);
             });
         });
 
@@ -208,7 +242,8 @@
                 min: weather.daily.temperature_2m_min[idx],
                 code: weather.daily.weather_code[idx],
                 sunrise: weather.daily.sunrise[idx],
-                sunset: weather.daily.sunset[idx]
+                sunset: weather.daily.sunset[idx],
+                latitude: location.latitude
             }));
 
             cityEl.textContent = city;
@@ -219,7 +254,7 @@
             bindForecastClicks(days);
 
             const today = days[0];
-            applyWeatherSceneForDay(today, weather.current.is_day === 0);
+            applyWeatherSceneForDay(today, weather.current.is_day === 0, location.latitude);
             stateEl.textContent = 'Weather updated.';
         } catch (error) {
             console.error(error);
