@@ -1,184 +1,202 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chayangkul Somruk - Infrastructure & Systems Engineer</title>
-    <meta name="description" content="Infrastructure & Systems Engineer working in 24/7 infrastructure environments, with experience in monitoring, incident coordination, and operational support.">
-    <meta name="keywords" content="Infrastructure Engineer, Systems Engineer, Data Center, Monitoring, Incident Coordination">
-    <meta name="author" content="Chayangkul Somruk">
-    <meta name="theme-color" content="#0f172a">
-    <link rel="stylesheet" href="assets/css/styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chayangkul (Tikker) | Cloud & Data Center Engineer</title>
+  <meta
+    name="description"
+    content="Cloud & Data Center Engineer portfolio focused on reliable infrastructure, automation, monitoring, and data systems."
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="style.css" />
 </head>
-<body class="bg-clear-night">
-    <div id="globalWeatherBg" class="global-weather-bg"></div>
-    <div class="global-overlay"></div>
-    <nav class="navbar">
-        <div class="nav-container">
-            <a href="#home" class="logo">CS</a>
-            <button id="hamburger-menu" class="hamburger-menu" title="Menu" aria-label="Open menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            <ul class="nav-menu">
-                <li><a href="#home" class="nav-link">Home</a></li>
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#experience" class="nav-link">Experience</a></li>
-                <li><a href="#projects" class="nav-link">Projects</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
-            </ul>
-        </div>
+<body>
+  <header class="top-nav">
+    <a class="brand" href="#hero">Tikker</a>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#education">Education</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
     </nav>
+  </header>
 
-    <section id="home" class="hero hero-professional">
-        <div id="heroWeatherBg" class="hero-weather-bg"></div>
-        <div class="hero-overlay"></div>
-        <div class="hero-content hero-content-centered">
-            <div class="hero-text">
-                <h1 class="hero-title">Chayangkul Somruk</h1>
-                <p class="hero-subtitle">Infrastructure & Systems Engineer</p>
-                <p class="hero-description">
-                    Working in 24/7 infrastructure environments, handling system monitoring, incident coordination, and infrastructure tasks. Background in data center operations with growing focus on networking and automation.
-                </p>
-                <div class="hero-buttons">
-                    <a href="assets/documents/Chayangkul_Somruk_CV.pdf" download target="_blank" rel="noopener" class="btn btn-primary">Download Resume</a>
-                    <a href="#contact" class="btn btn-secondary">Contact</a>
-                </div>
-                <div class="social-links">
-                    <a href="https://linkedin.com/in/chayangkul-somruk-50b476312" target="_blank" class="social-icon" data-social-link="linkedin">LinkedIn</a>
-                    <a href="https://github.com/TikkerLovely" target="_blank" class="social-icon" data-social-link="github">GitHub</a>
-                </div>
+  <main>
+    <section id="hero" class="panel hero-panel">
+      <div class="container two-col">
+        <div class="hero-content">
+          <p class="eyebrow">Cloud Infrastructure Portfolio</p>
+          <h1>Chayangkul (Tikker)</h1>
+          <h2>Cloud &amp; Data Center Engineer</h2>
+          <p class="lead">
+            Building reliable infrastructure, automation, and data systems.
+          </p>
+          <a class="btn-primary" href="assets/documents/Chayangkul_Somruk_CV.pdf" download>
+            Download CV
+          </a>
+        </div>
+
+        <div class="hero-visual" aria-label="Server and monitoring visual">
+          <div class="visual-header">
+            <span></span><span></span><span></span>
+          </div>
+          <div class="terminal-lines">
+            <p>$ kubectl get nodes</p>
+            <p>dc-core-01   Ready</p>
+            <p>dc-core-02   Ready</p>
+            <p>$ python etl_pipeline.py --status</p>
+            <p class="ok">Pipeline status: healthy</p>
+            <p>$ monitor --watch incidents</p>
+            <p class="warn">0 critical alerts</p>
+          </div>
+        </div>
+      </div>
+      <a class="scroll-indicator" href="#about" aria-label="Scroll to About section">↓</a>
+    </section>
+
+    <section id="about" class="panel glass-panel about-bg">
+      <div class="container center-wrap">
+        <article class="glass-card">
+          <h2>About Me</h2>
+          <div class="profile-grid">
+            <p><strong>Full name:</strong> Chayangkul Somruk</p>
+            <p><strong>Nickname:</strong> Tikker</p>
+            <p><strong>Date of birth:</strong> 11 June 2002</p>
+            <p><strong>Age:</strong> 23</p>
+          </div>
+          <p class="mindset">
+            I focus on resilient operations, clear observability, and disciplined automation.
+            My mindset is to make infrastructure stable, measurable, and ready for scale.
+          </p>
+          <ul class="skill-chips" aria-label="Key skills">
+            <li>Cloud</li>
+            <li>Networking</li>
+            <li>Data</li>
+            <li>Monitoring</li>
+            <li>Python</li>
+            <li>Power BI</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section id="experience" class="panel">
+      <div class="container">
+        <h2 class="section-title">Experience</h2>
+        <div class="timeline">
+          <article class="timeline-item">
+            <div class="dot" aria-hidden="true"></div>
+            <div class="card">
+              <h3>One Bangkok</h3>
+              <p class="role">Data Center / NOC Engineer</p>
+              <ul>
+                <li>Monitored critical systems and escalated incidents with clear communication paths.</li>
+                <li>Supported 24/7 infrastructure operations and routine health checks.</li>
+                <li>Collaborated with cross-functional teams for issue resolution and service continuity.</li>
+              </ul>
             </div>
-        </div>
+          </article>
 
-        <div class="container weather-wrap">
-            <section id="weather" class="weather-glass weather-card" aria-live="polite">
-                <p class="weather-date" id="weather-date">Loading date...</p>
-                <p class="weather-city" id="weather-city">Detecting location...</p>
-                <div class="weather-current">
-                    <h3 id="weather-temp">--°C</h3>
-                    <p id="weather-condition">Loading weather...</p>
-                </div>
-                <p id="weather-state" class="weather-state">Loading weather data...</p>
-                <div class="weather-forecast" id="weather-forecast"></div>
-            </section>
-        </div>
-    </section>
-
-    <section id="capabilities" class="capabilities reveal-section">
-        <div class="container">
-            <h2 class="section-title">Core Capabilities</h2>
-            <div class="capabilities-grid">
-                <div class="capability-item capability-card">Infrastructure Operations</div>
-                <div class="capability-item capability-card">System Monitoring & Incident Handling</div>
-                <div class="capability-item capability-card">Server Hardware Management</div>
-                <div class="capability-item capability-card">Cross-Team Technical Coordination</div>
-                <div class="capability-item capability-card">Operational Workflow & Reporting</div>
+          <article class="timeline-item">
+            <div class="dot" aria-hidden="true"></div>
+            <div class="card">
+              <h3>Tech Hub Solutions</h3>
+              <p class="role">Data Center Engineer</p>
+              <ul>
+                <li>Managed server room operations, preventive maintenance, and hardware support tasks.</li>
+                <li>Tracked incidents and produced operational reports for team review.</li>
+                <li>Improved documentation quality for repeatable infrastructure workflows.</li>
+              </ul>
             </div>
+          </article>
         </div>
+      </div>
     </section>
 
-    <section id="about" class="about reveal-section">
-        <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>Infrastructure professional with hands-on experience in data center and NOC environments, supporting day-to-day operations, system monitoring, and incident follow-up activities.</p>
-                    <p>Comfortable working in shift-based environments, coordinating with internal teams, and maintaining infrastructure documentation and reporting routines.</p>
-                    <div class="about-stats">
-                        <div class="stat"><h3>2+</h3><p>Years in Infrastructure Operations</p></div>
-                        <div class="stat"><h3>24/7</h3><p>Shift-Based Environment</p></div>
-                        <div class="stat"><h3>Ongoing</h3><p>Networking & Automation Growth</p></div>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <section id="education" class="panel glass-panel edu-bg">
+      <div class="container center-wrap">
+        <article class="glass-card">
+          <h2>Education</h2>
+          <p><strong>University:</strong> Bangkok University</p>
+          <p><strong>Degree:</strong> Bachelor of Engineering</p>
+          <p><strong>Field of Study:</strong> Computer &amp; Network Engineering</p>
+          <p><strong>Graduation Year:</strong> 2024</p>
+          <p><strong>GPA:</strong> 3.24</p>
+        </article>
+      </div>
     </section>
 
-    <section id="skills" class="skills reveal-section">
-        <div class="container">
-            <h2 class="section-title">Skills & Expertise</h2>
-            <div class="skills-grid"></div>
+    <section id="projects" class="panel">
+      <div class="container">
+        <h2 class="section-title">Projects</h2>
+        <div class="project-grid">
+          <article class="project-card">
+            <div class="thumb terminal-thumb"></div>
+            <h3>ETL Pipeline with Python</h3>
+            <p>Automated extraction, transformation, and loading workflows for operational datasets.</p>
+            <div class="badges"><span>Python</span><span>ETL</span><span>Automation</span></div>
+            <a href="https://github.com/TikkerLovely" target="_blank" rel="noopener">GitHub ↗</a>
+          </article>
+
+          <article class="project-card">
+            <div class="thumb dashboard-thumb"></div>
+            <h3>Power BI Dashboard Analytics</h3>
+            <p>Built KPI dashboards for incident trends, service uptime, and operational performance.</p>
+            <div class="badges"><span>Power BI</span><span>DAX</span><span>Analytics</span></div>
+            <a href="https://github.com/TikkerLovely" target="_blank" rel="noopener">GitHub ↗</a>
+          </article>
+
+          <article class="project-card glass-mini">
+            <div class="thumb weather-thumb"></div>
+            <h3>Weather Web App</h3>
+            <p>Responsive weather interface with location-based data and clean status presentation.</p>
+            <div class="badges"><span>JavaScript</span><span>API</span><span>UI</span></div>
+            <a href="https://github.com/TikkerLovely" target="_blank" rel="noopener">GitHub ↗</a>
+          </article>
+
+          <article class="project-card">
+            <div class="thumb monitor-thumb"></div>
+            <h3>Incident Monitoring Tool</h3>
+            <p>Lightweight monitoring utility for tracking events, alerts, and incident lifecycle.</p>
+            <div class="badges"><span>Monitoring</span><span>Python</span><span>Operations</span></div>
+            <a href="https://github.com/TikkerLovely" target="_blank" rel="noopener">GitHub ↗</a>
+          </article>
         </div>
+      </div>
     </section>
 
-    <section id="experience" class="experience reveal-section">
-        <div class="container">
-            <h2 class="section-title">Professional Experience</h2>
-            <div class="experience-timeline"></div>
+    <section id="contact" class="panel contact-panel">
+      <div class="container">
+        <h2 class="section-title">Contact</h2>
+        <div class="contact-grid">
+          <a class="contact-card" href="mailto:chayangkul@example.com">
+            <span class="icon">✉</span>
+            <span>Email</span>
+          </a>
+          <a class="contact-card" href="https://linkedin.com/in/chayangkul-somruk-50b476312" target="_blank" rel="noopener">
+            <span class="icon">in</span>
+            <span>LinkedIn</span>
+          </a>
+          <a class="contact-card" href="https://github.com/TikkerLovely" target="_blank" rel="noopener">
+            <span class="icon">⌘</span>
+            <span>GitHub</span>
+          </a>
+          <a class="contact-card" href="assets/documents/Chayangkul_Somruk_CV.pdf" download>
+            <span class="icon">⬇</span>
+            <span>Download CV</span>
+          </a>
         </div>
+      </div>
     </section>
+  </main>
 
-    <section id="projects" class="projects reveal-section">
-        <div class="container">
-            <h2 class="section-title">Projects</h2>
-            <div class="projects-grid"></div>
-        </div>
-    </section>
-
-    <section id="contact" class="contact reveal-section">
-        <div class="container">
-            <h2 class="section-title">Contact</h2>
-            <div class="contact-wrapper">
-                <div class="contact-info">
-                    <h3>Contact Information</h3>
-                    <div class="contact-item">
-                        <div>
-                            <p class="contact-label">Email</p>
-                            <a href="mailto:chayangkul.somruk@gmail.com">chayangkul.somruk@gmail.com</a>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div>
-                            <p class="contact-label">GitHub</p>
-                            <a href="https://github.com/TikkerLovely" target="_blank" data-social-link="github">github.com/TikkerLovely</a>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div>
-                            <p class="contact-label">LinkedIn</p>
-                            <a href="https://linkedin.com/in/chayangkul-somruk-50b476312" target="_blank" data-social-link="linkedin">linkedin.com/in/chayangkul-somruk-50b476312</a>
-                        </div>
-                    </div>
-                </div>
-
-                <form class="contact-form" id="contact-form">
-                    <div class="form-group">
-                        <label for="name">Full Name *</label>
-                        <input type="text" id="name" name="name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email Address *</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="subject">Subject *</label>
-                        <input type="text" id="subject" name="subject" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Message *</label>
-                        <textarea id="message" name="message" rows="5" required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary btn-submit">Send Message</button>
-                </form>
-            </div>
-        </div>
-    </section>
-
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <p id="footer-name">Chayangkul Somruk</p>
-                <p class="footer-stats"><span id="footer-title">Infrastructure & Systems Engineer</span> • <span id="footer-location">Bangkok, Thailand</span></p>
-                <a href="assets/documents/Chayangkul_Somruk_CV.pdf" class="project-link" download target="_blank" rel="noopener">Download Resume</a>
-            </div>
-        </div>
-        <script src="assets/js/app.js"></script>
-        <script src="assets/js/counter.js"></script>
-        <script src="assets/js/contact.js"></script>
-        <script src="assets/js/hamburger.js"></script>
-        <script src="assets/js/weather.js"></script>
-    </footer>
+  <script src="script.js"></script>
 </body>
 </html>
