@@ -166,6 +166,18 @@ body {
   padding: 0.72rem 1.1rem;
 }
 
+.hero-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.55rem;
+  margin-top: 0.6rem;
+  max-width: 620px;
+}
+
+.hero-action {
+  min-height: 60px;
+}
+
 .scroll-indicator {
   display: inline-block;
   margin-top: 1.8rem;
@@ -223,6 +235,29 @@ body {
   z-index: 1;
   display: grid;
   place-items: center;
+}
+
+.about-layout {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  gap: 1rem;
+  align-items: center;
+}
+
+.about-photo-wrap {
+  width: 100%;
+}
+
+.about-photo {
+  width: 100%;
+  max-width: 380px;
+  margin: 0 auto;
+  display: block;
+  border-radius: 0.9rem;
+  object-fit: cover;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.28);
 }
 
 .glass-card {
@@ -451,17 +486,22 @@ body {
     gap: 1.1rem;
   }
 
+  .about-layout {
+    grid-template-columns: 0.44fr 0.56fr;
+    gap: 1.2rem;
+  }
+
   .about-grid {
     grid-template-columns: 1fr 1fr;
     gap: 0.4rem 1rem;
   }
 
-  .project-grid {
-    grid-template-columns: 1fr 1fr;
+  .hero-actions {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
-  .contact-grid {
-    grid-template-columns: repeat(4, 1fr);
+  .project-grid {
+    grid-template-columns: 1fr 1fr;
   }
 
   .full-banner {
