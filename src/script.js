@@ -1,11 +1,12 @@
 (() => {
-  const links = document.querySelectorAll('a[href^="#"]');
+  const anchors = document.querySelectorAll('a[href^="#"]');
 
-  links.forEach((link) => {
-    link.addEventListener('click', (event) => {
-      const targetId = link.getAttribute('href');
-      if (!targetId || targetId === '#') return;
-      const target = document.querySelector(targetId);
+  anchors.forEach((anchor) => {
+    anchor.addEventListener('click', (event) => {
+      const selector = anchor.getAttribute('href');
+      if (!selector || selector === '#') return;
+
+      const target = document.querySelector(selector);
       if (!target) return;
 
       event.preventDefault();
