@@ -30,13 +30,28 @@
 
   <main>
     <section id="hero" class="section hero">
-      <div class="container hero-inner">
-        <p class="section-label">Infrastructure Portfolio</p>
-        <h1>Chayangkul (Tikker)</h1>
-        <h2>Infrastructure &amp; Network Engineer</h2>
-        <p class="hero-subtitle">Keeping systems stable. Monitoring what matters. Fixing problems fast.</p>
-        <a class="btn-primary" href="assets/documents/Chayangkul_Somruk_CV.pdf" download>Download CV</a>
-        <a class="scroll-indicator" href="#about" aria-label="Scroll to About">↓</a>
+      <div class="container hero-layout">
+        <div class="hero-inner">
+          <p class="section-label">Infrastructure Portfolio</p>
+          <h1>Chayangkul (Tikker)</h1>
+          <h2>Infrastructure &amp; Network Engineer</h2>
+          <p class="hero-subtitle">Keeping systems stable. Monitoring what matters. Fixing problems fast.</p>
+          <a class="btn-primary" href="assets/documents/Chayangkul_Somruk_CV.pdf" download>Download CV</a>
+          <a class="scroll-indicator" href="#about" aria-label="Scroll to About">↓</a>
+        </div>
+        <aside class="hero-terminal" aria-label="Operations terminal status">
+          <div class="terminal-header">
+            <span></span><span></span><span></span>
+          </div>
+          <div class="terminal-body">
+            <p>$ monitor --service core-network</p>
+            <p class="ok">status: stable</p>
+            <p>$ noc --active-incidents</p>
+            <p class="warn">active_critical: 0</p>
+            <p>$ python ops_report.py --daily</p>
+            <p class="ok">report generated</p>
+          </div>
+        </aside>
       </div>
     </section>
 
@@ -161,10 +176,10 @@
       <div class="container">
         <h3 class="title">Contact</h3>
         <div class="contact-grid">
-          <a href="mailto:chayangkul@example.com">Email</a>
-          <a href="https://linkedin.com/in/chayangkul-somruk-50b476312" target="_blank" rel="noopener">LinkedIn</a>
-          <a href="https://github.com/TikkerLovely" target="_blank" rel="noopener">GitHub</a>
-          <a href="assets/documents/Chayangkul_Somruk_CV.pdf" download>Download CV</a>
+          <a class="contact-card" href="mailto:chayangkul@example.com"><span class="contact-icon">✉</span><span>Email</span></a>
+          <a class="contact-card" href="https://linkedin.com/in/chayangkul-somruk-50b476312" target="_blank" rel="noopener"><span class="contact-icon">in</span><span>LinkedIn</span></a>
+          <a class="contact-card" href="https://github.com/TikkerLovely" target="_blank" rel="noopener"><span class="contact-icon">⌘</span><span>GitHub</span></a>
+          <a class="contact-card" href="assets/documents/Chayangkul_Somruk_CV.pdf" download><span class="contact-icon">⬇</span><span>Download CV</span></a>
         </div>
       </div>
     </section>

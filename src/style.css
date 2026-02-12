@@ -83,6 +83,50 @@ body {
   max-width: 760px;
 }
 
+.hero-layout {
+  display: grid;
+  gap: 1.2rem;
+}
+
+.hero-terminal {
+  background: #0b1220;
+  border: 1px solid rgba(250, 204, 21, 0.24);
+  border-radius: 0.85rem;
+  overflow: hidden;
+  max-width: 520px;
+}
+
+.terminal-header {
+  display: flex;
+  gap: 0.45rem;
+  padding: 0.7rem 0.8rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.09);
+}
+
+.terminal-header span {
+  width: 0.62rem;
+  height: 0.62rem;
+  border-radius: 50%;
+  background: #334155;
+}
+
+.terminal-body {
+  padding: 0.9rem;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  color: #cbd5e1;
+  font-size: 0.86rem;
+  display: grid;
+  gap: 0.25rem;
+}
+
+.terminal-body .ok {
+  color: #86efac;
+}
+
+.terminal-body .warn {
+  color: #fde68a;
+}
+
 .section-label {
   color: var(--accent);
   font-size: 0.82rem;
@@ -351,8 +395,7 @@ body {
   padding: 0.2rem 0.5rem;
 }
 
-.project-card a,
-.contact-grid a {
+.project-card a {
   text-decoration: none;
   color: var(--accent);
   font-weight: 600;
@@ -368,15 +411,26 @@ body {
   gap: 0.75rem;
 }
 
-.contact-grid a {
+.contact-card {
   background: var(--card-bg);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 0.8rem;
   color: var(--text-main);
   padding: 0.9rem 1rem;
+  text-decoration: none;
+  display: grid;
+  place-items: center;
+  gap: 0.32rem;
+  font-weight: 600;
 }
 
-.contact-grid a:hover {
+.contact-icon {
+  color: var(--accent);
+  font-weight: 800;
+  font-size: 1.08rem;
+}
+
+.contact-card:hover {
   border-color: rgba(250, 204, 21, 0.45);
   color: var(--accent);
 }
@@ -384,6 +438,12 @@ body {
 @media (min-width: 760px) {
   .top-nav {
     padding: 0.9rem 1.6rem;
+  }
+
+  .hero-layout {
+    grid-template-columns: 1.1fr 0.9fr;
+    align-items: center;
+    gap: 2rem;
   }
 
   .top-nav nav {
