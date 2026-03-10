@@ -1,184 +1,187 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chayangkul Somruk - Infrastructure & Systems Engineer</title>
-    <meta name="description" content="Infrastructure & Systems Engineer working in 24/7 infrastructure environments, with experience in monitoring, incident coordination, and operational support.">
-    <meta name="keywords" content="Infrastructure Engineer, Systems Engineer, Data Center, Monitoring, Incident Coordination">
-    <meta name="author" content="Chayangkul Somruk">
-    <meta name="theme-color" content="#0f172a">
-    <link rel="stylesheet" href="assets/css/styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chayangkul (Tikker) | Infrastructure & Network Engineer</title>
+  <meta
+    name="description"
+    content="Professional portfolio of Chayangkul (Tikker), Infrastructure & Network Engineer specializing in stable systems, monitoring, and fast incident response."
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="style.css" />
 </head>
-<body class="bg-clear-night">
-    <div id="globalWeatherBg" class="global-weather-bg"></div>
-    <div class="global-overlay"></div>
-    <nav class="navbar">
-        <div class="nav-container">
-            <a href="#home" class="logo">CS</a>
-            <button id="hamburger-menu" class="hamburger-menu" title="Menu" aria-label="Open menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            <ul class="nav-menu">
-                <li><a href="#home" class="nav-link">Home</a></li>
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#experience" class="nav-link">Experience</a></li>
-                <li><a href="#projects" class="nav-link">Projects</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
-            </ul>
-        </div>
+<body>
+  <header class="top-nav">
+    <a href="#hero" class="brand">Tikker</a>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#education">Education</a>
+      <a href="#projects">Projects</a>
     </nav>
+  </header>
 
-    <section id="home" class="hero hero-professional">
-        <div id="heroWeatherBg" class="hero-weather-bg"></div>
-        <div class="hero-overlay"></div>
-        <div class="hero-content hero-content-centered">
-            <div class="hero-text">
-                <h1 class="hero-title">Chayangkul Somruk</h1>
-                <p class="hero-subtitle">Infrastructure & Systems Engineer</p>
-                <p class="hero-description">
-                    Working in 24/7 infrastructure environments, handling system monitoring, incident coordination, and infrastructure tasks. Background in data center operations with growing focus on networking and automation.
-                </p>
-                <div class="hero-buttons">
-                    <a href="assets/documents/Chayangkul_Somruk_CV.pdf" download target="_blank" rel="noopener" class="btn btn-primary">Download Resume</a>
-                    <a href="#contact" class="btn btn-secondary">Contact</a>
-                </div>
-                <div class="social-links">
-                    <a href="https://linkedin.com/in/chayangkul-somruk-50b476312" target="_blank" class="social-icon" data-social-link="linkedin">LinkedIn</a>
-                    <a href="https://github.com/TikkerLovely" target="_blank" class="social-icon" data-social-link="github">GitHub</a>
-                </div>
+  <main>
+    <section id="hero" class="section hero">
+      <div class="container hero-layout">
+        <div class="hero-inner">
+          <p class="section-label">Portfolio</p>
+          <h1>Chayangkul (Tikker)</h1>
+          <h2>Infrastructure &amp; Network Engineer</h2>
+          <p class="hero-subtitle">Keeping systems stable. Monitoring what matters. Fixing problems fast.</p>
+          <div class="hero-actions" aria-label="Primary actions">
+            <a class="contact-card hero-action" href="mailto:chayangkul@example.com"><span class="contact-icon">✉</span><span>Email</span></a>
+            <a class="contact-card hero-action" href="https://linkedin.com/in/chayangkul-somruk-50b476312" target="_blank" rel="noopener"><span class="contact-icon">in</span><span>LinkedIn</span></a>
+            <a class="contact-card hero-action" href="https://github.com/TikkerLovely" target="_blank" rel="noopener"><span class="contact-icon">⌘</span><span>GitHub</span></a>
+            <a class="contact-card hero-action" href="assets/documents/Chayangkul_Somruk_CV.pdf" download><span class="contact-icon">⬇</span><span>Download CV</span></a>
+          </div>
+          <a class="scroll-indicator" href="#about" aria-label="Scroll to About">↓</a>
+        </div>
+        <aside class="hero-terminal" aria-label="Operations terminal status">
+          <div class="terminal-header">
+            <span></span><span></span><span></span>
+          </div>
+          <div class="terminal-body">
+            <p>$ monitor --service core-network</p>
+            <p class="ok">status: stable</p>
+            <p>$ noc --active-incidents</p>
+            <p class="warn">active_critical: 0</p>
+            <p>$ python ops_report.py --daily</p>
+            <p class="ok">report generated</p>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="about" class="section glass-section about-bg">
+      <div class="container about-layout">
+        <div class="about-photo-wrap">
+          <img src="assets/images/my Image.png" alt="Chayangkul profile photo" class="glass-card" />
+        </div>
+        <article class="glass-card">
+          <h3>About Me</h3>
+          <div class="about-grid">
+            <p><strong>Full Name:</strong> Chayangkul Somruk</p>
+            <p><strong>Nickname:</strong> Tikker</p>
+            <p><strong>Date of Birth:</strong> 11 June 2002</p>
+            <p><strong>Age:</strong> 23</p>
+          </div>
+          <p class="summary">
+            Infrastructure and network engineer with hands-on experience in data center and NOC operations.
+            I focus on proactive monitoring, disciplined incident handling, and practical automation that improves
+            service reliability, response time, and day-to-day operational consistency.
+          </p>
+          <div class="skills-grid">
+            <span>Python</span><span>SQL</span><span>C++</span><span>C</span><span>Java</span>
+            <span>Linux</span><span>Network</span><span>Monitoring</span><span>Nagios</span><span>Zabbix</span>
+            <span>PRTG</span><span>Cacti</span><span>Hardware</span><span>Automation</span><span>Reporting</span>
+            <span>BMS</span><span>EMS</span><span>CCTV Monitoring</span><span>Access Control Systems</span>
+            <span>Incident Response</span><span>SOP-based Operations</span><span>Excel</span><span>Power BI</span>
+            <span>Server &amp; GPU Troubleshooting</span><span>OOB/BMC Tools</span><span>Hardware &amp; Cabling</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="experience" class="section dark-section">
+      <div class="container">
+        <h3 class="title">Experience</h3>
+
+        <div class="timeline">
+          <article class="timeline-item">
+            <div class="dot" aria-hidden="true"></div>
+            <div class="timeline-card">
+              <h4>One Bangkok</h4>
+              <p class="role">Data Center / NOC Engineer</p>
+              <ul>
+                <li>Monitored critical infrastructure systems and performed shift-based health checks.</li>
+                <li>Handled incident escalation and cross-team coordination to restore services quickly.</li>
+                <li>Maintained operations reporting and supported 24/7 service continuity activities.</li>
+              </ul>
             </div>
-        </div>
+          </article>
 
-        <div class="container weather-wrap">
-            <section id="weather" class="weather-glass weather-card" aria-live="polite">
-                <p class="weather-date" id="weather-date">Loading date...</p>
-                <p class="weather-city" id="weather-city">Detecting location...</p>
-                <div class="weather-current">
-                    <h3 id="weather-temp">--°C</h3>
-                    <p id="weather-condition">Loading weather...</p>
-                </div>
-                <p id="weather-state" class="weather-state">Loading weather data...</p>
-                <div class="weather-forecast" id="weather-forecast"></div>
-            </section>
-        </div>
-    </section>
-
-    <section id="capabilities" class="capabilities reveal-section">
-        <div class="container">
-            <h2 class="section-title">Core Capabilities</h2>
-            <div class="capabilities-grid">
-                <div class="capability-item capability-card">Infrastructure Operations</div>
-                <div class="capability-item capability-card">System Monitoring & Incident Handling</div>
-                <div class="capability-item capability-card">Server Hardware Management</div>
-                <div class="capability-item capability-card">Cross-Team Technical Coordination</div>
-                <div class="capability-item capability-card">Operational Workflow & Reporting</div>
+          <article class="timeline-item">
+            <div class="dot" aria-hidden="true"></div>
+            <div class="timeline-card">
+              <h4>Tech Hub Solutions</h4>
+              <p class="role">Data Center Engineer</p>
+              <ul>
+                <li>Supported data center operations, routine maintenance, and hardware handling workflows.</li>
+                <li>Tracked incidents and follow-up tasks to improve operational visibility.</li>
+                <li>Improved internal documentation for repeatable infrastructure procedures.</li>
+              </ul>
             </div>
+          </article>
         </div>
+
+        <div class="banner-stack">
+          <img src="assets/images/1729585933_ปก_800_One_Bangkok_6.jpg" alt="One Bangkok skyline" class="full-banner" />
+          <img src="assets/images/GSA01-108-scaled.jpg" alt="Data center facility" class="full-banner" />
+        </div>
+      </div>
     </section>
 
-    <section id="about" class="about reveal-section">
-        <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>Infrastructure professional with hands-on experience in data center and NOC environments, supporting day-to-day operations, system monitoring, and incident follow-up activities.</p>
-                    <p>Comfortable working in shift-based environments, coordinating with internal teams, and maintaining infrastructure documentation and reporting routines.</p>
-                    <div class="about-stats">
-                        <div class="stat"><h3>2+</h3><p>Years in Infrastructure Operations</p></div>
-                        <div class="stat"><h3>24/7</h3><p>Shift-Based Environment</p></div>
-                        <div class="stat"><h3>Ongoing</h3><p>Networking & Automation Growth</p></div>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <section id="education" class="section glass-section education-bg">
+      <div class="container center-layout">
+        <article class="glass-card">
+          <h3>Education</h3>
+          <p><strong>University:</strong> Bangkok University</p>
+          <p><strong>Degree / Major:</strong> Bachelor of Engineering, Computer &amp; Network Engineering</p>
+          <p><strong>Graduation Year:</strong> 2024</p>
+          <p><strong>Academic Accomplishments:</strong> Completed engineering coursework focused on network systems and infrastructure operations.</p>
+          <img src="./assets/images/be8da3c9-c04f-43a6-bb78-62124ac0f6a9.jpg" alt="Bangkok University" class="full-banner" />
+
+        </article>
+      </div>
     </section>
 
-    <section id="skills" class="skills reveal-section">
-        <div class="container">
-            <h2 class="section-title">Skills & Expertise</h2>
-            <div class="skills-grid"></div>
+    <section id="projects" class="section dark-section">
+      <div class="container">
+        <h3 class="title">Projects</h3>
+        <div class="project-grid">
+          <article class="project-card">
+            <div class="project-thumb thumb-etl" role="img" aria-label="ETL pipeline diagram"></div>
+            <h4>ETL Pipeline Project</h4>
+            <p>Automated data extraction and transformation workflows for operational reporting pipelines.</p>
+            <div class="badges"><span>Python</span><span>ETL</span><span>Scheduling</span></div>
+            <a href="https://github.com/TikkerLovely" target="_blank" rel="noopener">GitHub</a>
+          </article>
+
+          <article class="project-card">
+            <div class="project-thumb thumb-bi" role="img" aria-label="Power BI dashboard analytics"></div>
+            <h4>Power BI Dashboard</h4>
+            <p>Developed dashboard views for incident trends and infrastructure performance indicators.</p>
+            <div class="badges"><span>Power BI</span><span>DAX</span><span>Analytics</span></div>
+            <a href="https://github.com/TikkerLovely" target="_blank" rel="noopener">GitHub</a>
+          </article>
+
+          <article class="project-card weather-card">
+            <div class="project-thumb thumb-weather" role="img" aria-label="Weather web application preview"></div>
+            <h4>Weather Web App</h4>
+            <p>Built a responsive weather interface with condition summaries and location-aware output.</p>
+            <div class="badges"><span>JavaScript</span><span>API</span><span>UI</span></div>
+            <a href="https://github.com/TikkerLovely" target="_blank" rel="noopener">GitHub</a>
+          </article>
+
+          <article class="project-card">
+            <div class="project-thumb thumb-monitor" role="img" aria-label="Incident monitoring tool screen"></div>
+            <h4>Incident Monitoring Tool</h4>
+            <p>Created a monitoring utility to track service events and support operational escalation flow.</p>
+            <div class="badges"><span>Monitoring</span><span>Python</span><span>Ops</span></div>
+            <a href="https://github.com/TikkerLovely" target="_blank" rel="noopener">GitHub</a>
+          </article>
         </div>
+      </div>
     </section>
+  </main>
 
-    <section id="experience" class="experience reveal-section">
-        <div class="container">
-            <h2 class="section-title">Professional Experience</h2>
-            <div class="experience-timeline"></div>
-        </div>
-    </section>
-
-    <section id="projects" class="projects reveal-section">
-        <div class="container">
-            <h2 class="section-title">Projects</h2>
-            <div class="projects-grid"></div>
-        </div>
-    </section>
-
-    <section id="contact" class="contact reveal-section">
-        <div class="container">
-            <h2 class="section-title">Contact</h2>
-            <div class="contact-wrapper">
-                <div class="contact-info">
-                    <h3>Contact Information</h3>
-                    <div class="contact-item">
-                        <div>
-                            <p class="contact-label">Email</p>
-                            <a href="mailto:chayangkul.somruk@gmail.com">chayangkul.somruk@gmail.com</a>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div>
-                            <p class="contact-label">GitHub</p>
-                            <a href="https://github.com/TikkerLovely" target="_blank" data-social-link="github">github.com/TikkerLovely</a>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div>
-                            <p class="contact-label">LinkedIn</p>
-                            <a href="https://linkedin.com/in/chayangkul-somruk-50b476312" target="_blank" data-social-link="linkedin">linkedin.com/in/chayangkul-somruk-50b476312</a>
-                        </div>
-                    </div>
-                </div>
-
-                <form class="contact-form" id="contact-form">
-                    <div class="form-group">
-                        <label for="name">Full Name *</label>
-                        <input type="text" id="name" name="name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email Address *</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="subject">Subject *</label>
-                        <input type="text" id="subject" name="subject" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Message *</label>
-                        <textarea id="message" name="message" rows="5" required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary btn-submit">Send Message</button>
-                </form>
-            </div>
-        </div>
-    </section>
-
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <p id="footer-name">Chayangkul Somruk</p>
-                <p class="footer-stats"><span id="footer-title">Infrastructure & Systems Engineer</span> • <span id="footer-location">Bangkok, Thailand</span></p>
-                <a href="assets/documents/Chayangkul_Somruk_CV.pdf" class="project-link" download target="_blank" rel="noopener">Download Resume</a>
-            </div>
-        </div>
-        <script src="assets/js/app.js"></script>
-        <script src="assets/js/counter.js"></script>
-        <script src="assets/js/contact.js"></script>
-        <script src="assets/js/hamburger.js"></script>
-        <script src="assets/js/weather.js"></script>
-    </footer>
+  <script src="script.js"></script>
 </body>
 </html>
